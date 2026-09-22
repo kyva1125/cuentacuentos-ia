@@ -1,0 +1,53 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "CuentosMati: recorrido de una aventura",
+    "quality_profile": "showcase",
+    "viewBox": [1100, 780]
+  },
+  "lanes": [
+    { "id": "child", "label": "Niño o niña" },
+    { "id": "app", "label": "Aplicación React (navegador)" },
+    { "id": "server", "label": "Servidor Node / API" },
+    { "id": "storage", "label": "Datos guardados" }
+  ],
+  "phases": [
+    { "id": "choose", "label": "1. Elegir", "fromCol": 0, "toCol": 0 },
+    { "id": "create", "label": "2. Crear o abrir", "fromCol": 1, "toCol": 1, "variant": "emphasis" },
+    { "id": "read", "label": "3. Leer, decidir y guardar", "fromCol": 2, "toCol": 3 }
+  ],
+  "groups": [
+    { "id": "ai", "label": "Generación con IA", "lane": "server", "fromCol": 1, "toCol": 3, "variant": "emphasis" },
+    { "id": "offline", "label": "Funciona también sin red", "lane": "storage", "fromCol": 0, "toCol": 3, "variant": "dashed" }
+  ],
+  "mainPath": ["start", "home", "form", "storyApi", "reader", "choice", "continueApi", "finish"],
+  "nodes": [
+    { "id": "start", "lane": "child", "col": 0, "type": "external", "label": "Abre CuentosMati", "sublabel": "Inicio, Biblioteca o Perfil", "width": 152 },
+    { "id": "home", "lane": "app", "col": 0, "type": "frontend", "label": "App.tsx", "sublabel": "estado y navegación", "tag": "pantalla principal", "width": 152 },
+    { "id": "form", "lane": "child", "col": 2, "type": "external", "label": "Elige personaje y tema", "sublabel": "o abre el catálogo", "width": 152 },
+    { "id": "storyApi", "lane": "server", "col": 2, "type": "backend", "label": "POST /api/stories", "sublabel": "crea el capítulo 1", "tag": "cuento nuevo", "width": 152 },
+    { "id": "reader", "lane": "app", "col": 2, "type": "frontend", "label": "Lector de capítulos", "sublabel": "texto, imagen y 3 opciones", "width": 152 },
+    { "id": "choice", "lane": "child", "col": 1, "type": "external", "label": "Lee y toma una decisión", "sublabel": "gana valor, amistad o sabiduría", "width": 152 },
+    { "id": "continueApi", "lane": "server", "col": 3, "type": "backend", "label": "POST /api/continue", "sublabel": "siguiente capítulo o final", "width": 152 },
+    { "id": "finish", "lane": "app", "col": 3, "type": "frontend", "label": "Final y progreso", "sublabel": "resumen de la aventura", "width": 152 },
+    { "id": "local", "lane": "storage", "col": 1, "type": "database", "label": "localStorage", "sublabel": "cuento, decisiones y progreso", "tag": "siempre", "width": 152 },
+    { "id": "account", "lane": "storage", "col": 3, "type": "database", "label": "Cuenta y API", "sublabel": "perfil e historias si hay sesión", "tag": "opcional", "width": 152 }
+  ],
+  "edges": [
+    { "from": "start", "to": "home", "label": "navega", "role": "main" },
+    { "from": "home", "to": "form", "label": "Crear una aventura", "role": "main" },
+    { "from": "form", "to": "storyApi", "label": "solicita cuento", "variant": "emphasis", "role": "main" },
+    { "from": "storyApi", "to": "reader", "label": "devuelve capítulo 1", "variant": "emphasis", "role": "main" },
+    { "from": "reader", "to": "choice", "label": "presenta opciones", "role": "main" },
+    { "from": "choice", "to": "continueApi", "label": "envía elección", "variant": "emphasis", "role": "main" },
+    { "from": "continueApi", "to": "finish", "label": "nuevo capítulo o FIN", "variant": "emphasis", "role": "main" },
+    { "from": "storyApi", "to": "local", "label": "guarda cuento y decisiones", "variant": "dashed", "role": "branch" },
+    { "from": "local", "to": "account", "label": "sincroniza al iniciar sesión", "variant": "dashed", "role": "async" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Qué hace el frontend", "items": ["App.tsx coordina las pantallas y el estado", "Los componentes dibujan biblioteca, perfil, creador y lector"] },
+    { "dot": "amber", "title": "Dos formas de leer", "items": ["Catálogo: capítulos ya incluidos en la app", "Aventura nueva: el servidor crea el texto y puede pedir una imagen"] },
+    { "dot": "emerald", "title": "Regla importante", "items": ["El navegador guarda una copia para que el progreso no se pierda sin conexión", "Con cuenta, también se intenta sincronizar con la API"] }
+  ]
+}

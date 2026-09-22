@@ -1,0 +1,29 @@
+.vercel
+.env
+.env.local
+*.local
+.runtime/
+.vscode/
+server/.env
+.gamemaker-mcp/
+node_modules/
+dist/
+tmp/
+.playwright-cli/
+.playwright-mcp/
+.codebase-memory/
+.ua/
+*.tsbuildinfo
+scripts/branch-images.*.html
+scripts/branch-images.report.json
+vite.config.js
+vite.config.d.ts
+
+_tryimage/
+
+# branch-gen: material intermedio de la generación de ramas. Lo que usa la app
+# es src/data/catalog-branches.json (sí versionado); esto es el rastro crudo
+# del generador, reproducible con `npm run branch:generate`.
+scripts/branch-gen/output/
+scripts/branch-gen/run.log
+scripts/branch-gen/dev.log

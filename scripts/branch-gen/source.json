@@ -1,0 +1,761 @@
+[
+  {
+    "id": "ines-mapa",
+    "title": "Inés y el mapa que cambiaba de lugar",
+    "story": "Inés encuentra un mapa dentro de un libro de la biblioteca. No marca tesoros: dibuja su barrio y una línea azul que se mueve cuando ella camina. La pista la conduce a la plaza, donde los carteles de las plantas han desaparecido.",
+    "choices": [
+      "Seguir las huellas de barro",
+      "Hablar con el jardinero",
+      "Revisar el quiosco",
+      "Mirar el mapa otra vez"
+    ]
+  },
+  {
+    "id": "bruno-bicicleta",
+    "title": "Bruno y la bicicleta de las ideas",
+    "story": "Bruno quiere participar en la carrera escolar con una bicicleta vieja, de timbre desafinado y canasta torcida. Una lluvia fuerte deja el patio lleno de barro y las ruedas de sus amigos se atascan antes de la meta.",
+    "choices": [
+      "Usar la canasta para ayudar",
+      "Observar dónde se atascan las ruedas",
+      "Pedir tablas y cuerdas",
+      "Animar a sus amigos"
+    ]
+  },
+  {
+    "id": "mara-faro",
+    "title": "Mara y el secreto del faro apagado",
+    "story": "Una tarde, el faro de la isla de Mara no se enciende y la niebla cubre el mar. Con su abuelo, sube la escalera en espiral y descubre que el espejo que dirige la luz está cubierto de sal.",
+    "choices": [
+      "Buscar paños y agua dulce",
+      "Mirar los botes desde la ventana",
+      "Limpiar una franja del espejo",
+      "Pedir ayuda al abuelo"
+    ]
+  },
+  {
+    "id": "samira-preguntas",
+    "title": "Samira y el club de las preguntas difíciles",
+    "story": "Samira debe investigar por qué las hojas cambian de color junto a Leo, que pregunta mucho, y Abril, que quiere terminar rápido. La primera reunión termina en discusión, hasta que Samira dibuja tres columnas: saber, imaginar y comprobar.",
+    "choices": [
+      "Anotar todas las preguntas",
+      "Buscar evidencia en un libro",
+      "Observar un árbol durante una semana",
+      "Comparar hojas distintas"
+    ]
+  },
+  {
+    "id": "daniel-carta",
+    "title": "Daniel y la carta sin destinatario",
+    "story": "En el desván de su tía, Daniel halla una carta que dice: “Gracias por enseñarme a no rendirme”, pero no tiene nombre ni dirección. Al preguntar a sus vecinos, descubre la historia de un niño que aprendió a leer sin miedo.",
+    "choices": [
+      "Preguntar a los vecinos mayores",
+      "Buscar la letra en fotos antiguas",
+      "Llevar la carta a la biblioteca",
+      "Escribir un mensaje nuevo"
+    ]
+  },
+  {
+    "id": "julia-ventana",
+    "title": "Julia y la ventana de los pájaros",
+    "story": "Cada mañana, Julia ve pájaros chocar contra el ventanal del gimnasio. En vez de adivinar, anota durante una semana la hora, el clima y el lugar de cada golpe.",
+    "choices": [
+      "Registrar los datos",
+      "Buscar información confiable",
+      "Diseñar señales para el vidrio",
+      "Proponer un lugar seguro para el agua"
+    ]
+  },
+  {
+    "id": "noa-robot",
+    "title": "Noa y el día en que falló el robot",
+    "story": "El robot de Noa debe clasificar tapitas por colores, pero durante el ensayo mezcla el rojo y el naranja. Tomás propone esconder el fallo; Noa propone investigar por qué sucede.",
+    "choices": [
+      "Grabar el error",
+      "Revisar el sensor",
+      "Cambiar la posición de la lámpara",
+      "Explicar el proceso al jurado"
+    ]
+  },
+  {
+    "id": "amaya-puente",
+    "title": "Amaya y el puente de las dos orillas",
+    "story": "El puente peatonal del pueblo de Amaya cierra por reparaciones. Unos vecinos quieren tomar un atajo peligroso; otros creen que solo queda esperar. Amaya y su clase deciden escuchar a quienes necesitan cruzar el río.",
+    "choices": [
+      "Hablar con la municipalidad",
+      "Hacer una lista de necesidades",
+      "Organizar turnos de transporte",
+      "Diseñar carteles claros"
+    ]
+  },
+  {
+    "id": "ivan-melodia",
+    "title": "Iván y la melodía escondida",
+    "story": "Iván practica flauta para un concierto, pero una parte de la melodía siempre le sale mal. Su abuela le propone caminar mientras canta el ritmo y dividir el fragmento difícil en cuatro frases pequeñas.",
+    "choices": [
+      "Marcar el ritmo con pasos",
+      "Dividir la melodía",
+      "Anotar cada mejora",
+      "Respirar antes de tocar"
+    ]
+  },
+  {
+    "id": "elena-bosque",
+    "title": "Elena y el bosque que pedía silencio",
+    "story": "En una excursión, Elena llega a un bosque donde no se oyen pájaros. Cuando el grupo deja de gritar y escucha, descubre un pájaro carpintero construyendo un nido y muchas señales de vida escondida.",
+    "choices": [
+      "Caminar en parejas",
+      "Usar señales con las manos",
+      "Observar sin tocar",
+      "Anotar los sonidos del bosque"
+    ]
+  },
+  {
+    "id": "aina-faro-luciernagas",
+    "title": "Aina y el faro de las luciérnagas",
+    "story": "Cuando la neblina cubre la costa, Aina descubre que las luciérnagas han olvidado el camino al faro. Con calma, las reúne una por una para encender una señal amable.",
+    "choices": [
+      "Seguir los destellos",
+      "Escuchar el mar",
+      "Cuidar las flores",
+      "Subir al faro"
+    ]
+  },
+  {
+    "id": "beto-puentes-papel",
+    "title": "Beto y los puentes de papel",
+    "story": "Beto, un capibara curioso, ve que la lluvia separó a sus vecinos del otro lado del arroyo. Entonces prueba pliegues, hojas resistentes y muchas ideas compartidas.",
+    "choices": [
+      "Doblar papel fuerte",
+      "Pedir hojas grandes",
+      "Probar con piedritas",
+      "Invitar a los vecinos"
+    ]
+  },
+  {
+    "id": "zuri-farol",
+    "title": "Zuri y el farol del valle",
+    "story": "Zuri, un zorrito de montaña, encuentra un farol apagado justo cuando unas alpacas regresan a casa. Decide recorrer el valle y pedir ayuda sin correr riesgos.",
+    "choices": [
+      "Buscar aceite",
+      "Seguir las huellas",
+      "Llamar a las alpacas",
+      "Mirar las estrellas"
+    ]
+  },
+  {
+    "id": "lumi-colibri",
+    "title": "Lumi y la canción de la cascada",
+    "story": "Lumi, un colibrí músico, nota que las flores de cristal ya no cantan. Sigue la música de una cascada para descubrir qué necesita el jardín.",
+    "choices": [
+      "Tocar la flauta",
+      "Hablar con las mariposas",
+      "Seguir el agua",
+      "Escuchar en silencio"
+    ]
+  },
+  {
+    "id": "nora-nutria",
+    "title": "Nora y los frascos de luna",
+    "story": "Nora, una nutria navegante, descubre que los reflejos de la luna quedaron atrapados entre los juncos. Los recoge con cuidado para que el lago vuelva a iluminarse.",
+    "choices": [
+      "Remar despacio",
+      "Pedir ayuda a los peces",
+      "Ordenar los frascos",
+      "Soltar los reflejos"
+    ]
+  },
+  {
+    "id": "uma-jardin-estrellas",
+    "title": "Uma y el jardín de semillas estelares",
+    "story": "Uma, una osa de anteojos jardinera, recibe semillas que brillan solo cuando se las cuida con paciencia. El viento amenaza con llevarlas lejos de la terraza.",
+    "choices": [
+      "Preparar la tierra",
+      "Construir un refugio",
+      "Regar poquito",
+      "Mirar el cielo"
+    ]
+  },
+  {
+    "id": "paco-loro-biblioteca",
+    "title": "Paco y la biblioteca del árbol",
+    "story": "Paco, un loro bibliotecario, encuentra un marcador dorado entre los libros más altos. Para devolverlo, debe descubrir qué lector dejó una pista en cada página.",
+    "choices": [
+      "Ordenar los estantes",
+      "Leer las pistas",
+      "Preguntar al búho",
+      "Seguir las luciérnagas"
+    ]
+  },
+  {
+    "id": "tina-tortuga-corales",
+    "title": "Tina y las perlas del coral",
+    "story": "Tina, una tortuga marina, encuentra perlas luminosas dispersas por el arrecife. Cada una debe regresar a su concha antes de que llegue la noche.",
+    "choices": [
+      "Seguir las burbujas",
+      "Hablar con los peces",
+      "Nadar entre corales",
+      "Llevar una perla a la vez"
+    ]
+  },
+  {
+    "id": "ramon-mapache-arcoiris",
+    "title": "Ramón y la máquina de arcoíris",
+    "story": "Ramón, un mapache inventor, construye una máquina para pintar el cielo después de la lluvia. Pero sus colores salen mezclados y necesita investigar antes de intentar otra vez.",
+    "choices": [
+      "Revisar las ruedas",
+      "Probar un color",
+      "Anotar el resultado",
+      "Pedir una segunda opinión"
+    ]
+  },
+  {
+    "id": "vicu-cintas-viento",
+    "title": "Vicu y las cintas del viento",
+    "story": "Vicu, una vicuña pequeña, lleva cintas de colores a un paso de montaña. Las cintas muestran cuándo el viento es suave y cuándo conviene esperar.",
+    "choices": [
+      "Atar una cinta",
+      "Observar las nubes",
+      "Avisar al pueblo",
+      "Esperar juntos"
+    ]
+  },
+  {
+    "id": "luna-roble",
+    "title": "Luna y el roble de estrellas",
+    "story": "Luna descubrió que las estrellas no desaparecían de día: dormían dentro del roble más antiguo del jardín. Pero aquella mañana, una lucecita se había quedado atrapada entre sus raíces. La gatita acercó su naricita y oyó un tintineo suave, como una campana muy pequeña.",
+    "choices": [
+      "Seguir las huellas brillantes",
+      "Pedir ayuda a las luciérnagas",
+      "Escuchar al roble en silencio",
+      "Buscar una semilla dorada"
+    ]
+  },
+  {
+    "id": "zorro-azucar",
+    "title": "El zorro y el bosque de azúcar",
+    "story": "Tomás, un zorro valiente, encontró una cucharita de plata bajo un árbol de caramelos. La cucharita señalaba un camino de migas de galleta hacia la gran fiesta del bosque. Sin embargo, el aroma a canela venía de dos direcciones distintas.",
+    "choices": [
+      "Caminar hacia el puente de chocolate",
+      "Buscar la voz que canta una receta",
+      "Seguir las migas de galleta",
+      "Preguntar a los árboles de caramelo"
+    ]
+  },
+  {
+    "id": "sofia-tren",
+    "title": "Sofía y el tren de los colores",
+    "story": "Una mañana, Sofía encontró una estación diminuta detrás del arcoíris. Allí esperaba un tren con vagones rojos, azules y verdes, pero todos sus colores estaban apagándose. El maquinista, un grillo con gorra dorada, le explicó que las nubes habían olvidado cómo guardar los tonos del mundo.",
+    "choices": [
+      "Subir al vagón rojo",
+      "Seguir al pájaro azul",
+      "Buscar la pintura verde",
+      "Escuchar al grillo maquinista"
+    ]
+  },
+  {
+    "id": "gael-isla",
+    "title": "Gael y la isla de los susurros",
+    "story": "Gael llegó a una isla pequeña en su barquito de madera y encontró una caracola enorme que susurraba: “El mar necesita una canción nueva”. Cerca de la orilla, los peces daban vueltas en silencio y las palmeras parecían querer contarle algo.",
+    "choices": [
+      "Escuchar la caracola",
+      "Seguir a los peces luminosos",
+      "Ayudar a una tortuga verde",
+      "Buscar las huellas de cangrejo"
+    ]
+  },
+  {
+    "id": "alma-cometa",
+    "title": "Alma y la cometa de estrellas",
+    "story": "Alma encontró una cometa dorada entre las flores de una colina. Tenía forma de estrella y una cola larguísima que brillaba muy poquito. Un búho amable le contó que la cometa había olvidado cómo volar hasta el cielo, y que necesitaba reunir cuatro soplos de luz antes de que amaneciera.",
+    "choices": [
+      "Reparar la cometa con luciérnagas",
+      "Seguir al búho por la pradera",
+      "Buscar el viento entre las flores",
+      "Hablar con una estrella baja"
+    ]
+  },
+  {
+    "id": "vera-faro",
+    "title": "Vera y el faro de cristal",
+    "story": "Vera llegó a una isla donde un faro de cristal cuidaba a los barcos que navegaban de noche. Pero aquella tarde, su luz se volvió del color de la niebla. Un cangrejo mensajero le entregó una concha con un mapa y le dijo que tres destellos del mar podían despertarlo otra vez.",
+    "choices": [
+      "Seguir el mapa de conchas",
+      "Subir al faro de cristal",
+      "Preguntar a las gaviotas",
+      "Navegar hacia la cueva azul"
+    ]
+  },
+  {
+    "id": "teo-biblioteca",
+    "title": "Teo y la biblioteca de nubes",
+    "story": "Teo encontró una escalera de vapor detrás de su ventana y subió hasta una biblioteca que flotaba sobre las nubes. Cada libro guardaba una pequeña historia, pero uno de ellos había perdido su final. La bibliotecaria, una lechuza con lentes redondos, le pidió ayuda para reunir las páginas que el viento había llevado por el cielo.",
+    "choices": [
+      "Abrir el libro sin final",
+      "Seguir una página que vuela",
+      "Pedir consejo a la lechuza",
+      "Buscar entre los estantes altos"
+    ]
+  },
+  {
+    "id": "cora-jardin",
+    "title": "Cora y el jardín de los deseos",
+    "story": "En el patio de su abuela, Cora encontró un jardín donde cada flor guardaba un deseo pequeño: aprender algo, ayudar a un amigo o encontrar una sonrisa perdida. Una flor violeta no quería abrirse porque había olvidado cuál era su deseo. Cora decidió acompañarla antes de que saliera el sol.",
+    "choices": [
+      "Regar la flor violeta",
+      "Buscar una semilla brillante",
+      "Hablar con las abejas",
+      "Escuchar el jardín en silencio"
+    ]
+  },
+  {
+    "id": "robot-nubes",
+    "title": "Nico y la ciudad sobre las nubes",
+    "story": "Nico era un robot pequeñito que reparaba cometas. Una tarde, su brújula empezó a señalar una nube redonda que nadie podía ver. Cuando la tocó, encontró una ciudad flotante y una plaza llena de relojes que se habían quedado quietos.",
+    "choices": [
+      "Arreglar el reloj más pequeño",
+      "Preguntar a la alcaldesa nube",
+      "Seguir a un pájaro mecánico",
+      "Explorar la plaza de los relojes"
+    ]
+  },
+  {
+    "id": "ballena-luz",
+    "title": "La ballena de las mil luces",
+    "story": "Mara navegaba en una concha cuando vio una ballena enorme iluminando el océano con puntitos azules. La ballena buscaba su luz número mil, que se había escondido en una cueva porque tenía vergüenza de brillar.",
+    "choices": [
+      "Entrar en la cueva con una canción",
+      "Dejar un mensaje de burbujas",
+      "Pedir consejo a la ballena",
+      "Seguir un pez luminoso"
+    ]
+  },
+  {
+    "id": "dragon-panadero",
+    "title": "El dragón que horneaba nubes",
+    "story": "Bruno era un dragón que no lanzaba fuego para asustar: lo usaba para hornear pan. El día de la feria, una nube de masa escapó por la ventana del castillo y comenzó a flotar sobre las montañas.",
+    "choices": [
+      "Volar tras la nube de masa",
+      "Preparar una nueva receta con sus amigos",
+      "Pedir ayuda al viento",
+      "Seguir el aroma a pan caliente"
+    ]
+  },
+  {
+    "id": "lila-reloj",
+    "title": "Lila y el reloj de las flores",
+    "story": "Lila, una conejita con mochila turquesa y bufanda roja, encontró un reloj enorme entre las margaritas. Sus agujas se habían detenido y, con ellas, las flores del jardín. Una mariquita le mostró un sendero de destellos para descubrir quién había escondido el primer minuto de la mañana.",
+    "choices": [
+      "Seguir las agujas doradas",
+      "Preguntar a la mariquita",
+      "Cruzar el arroyo de piedras",
+      "Buscar semillas brillantes"
+    ]
+  },
+  {
+    "id": "leo-isla-cometas",
+    "title": "Leo y la isla de las cometas",
+    "story": "Leo llegó a una isla donde las cometas guiaban a los viajeros. Pero una ráfaga traviesa había mezclado todos los hilos y el mapa del puerto ya no sabía señalar el camino.",
+    "choices": [
+      "Subir a la colina del viento",
+      "Ordenar los hilos de colores",
+      "Mirar el mapa con su catalejo",
+      "Pedir ayuda a las gaviotas"
+    ]
+  },
+  {
+    "id": "nara-linterna",
+    "title": "Nara y la linterna de lluvia",
+    "story": "Nara construyó una linterna para escuchar la lluvia, pero la primera tormenta se llevó su luz azul. Las gotas dejaron pistas musicales desde el tejado hasta una nube muy baja.",
+    "choices": [
+      "Seguir el tambor de las gotas",
+      "Abrir su caja de herramientas",
+      "Hablar con la nube baja",
+      "Construir un barquito de papel"
+    ]
+  },
+  {
+    "id": "kiro-lago-luna",
+    "title": "Kiro y el lago de la luna",
+    "story": "Kiro descubrió que la luna no aparecía en el lago de noche. Una rana le contó que el reflejo se había escondido porque las olas tenían demasiada prisa.",
+    "choices": [
+      "Caminar despacio por la orilla",
+      "Escuchar a las ranas",
+      "Buscar piedras redondas",
+      "Seguir un pez plateado"
+    ]
+  },
+  {
+    "id": "sol-coral",
+    "title": "Sol y el coral que contaba historias",
+    "story": "Sol oyó que un coral antiguo contaba historias cada vez más bajito. Para ayudarlo, debía reunir los sonidos amables que el océano había olvidado.",
+    "choices": [
+      "Seguir burbujas violetas",
+      "Cantar con los peces",
+      "Visitar a la tortuga sabia",
+      "Buscar una concha azul"
+    ]
+  },
+  {
+    "id": "pipa-montana",
+    "title": "Pipa y la montaña de algodón",
+    "story": "Pipa era una nubecita pequeña que quería ayudar a una montaña muy calurosa. Pero no sabía cómo hacer una sombra sin tapar las flores que crecían abajo.",
+    "choices": [
+      "Preguntar al viento suave",
+      "Formar una nube redonda",
+      "Hablar con las flores",
+      "Seguir a una mariposa"
+    ]
+  },
+  {
+    "id": "maya-colmena",
+    "title": "Maya y la colmena de los deseos",
+    "story": "Maya cuidaba una colmena que preparaba miel para las fiestas del bosque. Aquella tarde faltaba un aroma especial: el de una amistad recién compartida.",
+    "choices": [
+      "Visitar el jardín violeta",
+      "Seguir un rastro de polen",
+      "Ayudar a un caracol",
+      "Preguntar a las abejas mayores"
+    ]
+  },
+  {
+    "id": "ciro-sombreros",
+    "title": "Ciro y los sombreros del bosque",
+    "story": "Ciro practicaba un hechizo para colorear sombreros de fiesta, pero una chispa saltó al bosque y escondió los colores entre los árboles. Su varita solo brillaba cuando elegía ayudar primero.",
+    "choices": [
+      "Seguir una chispa naranja",
+      "Preparar una poción suave",
+      "Preguntar a los árboles",
+      "Compartir su capa con un erizo"
+    ]
+  },
+  {
+    "id": "elsa-tren",
+    "title": "Elsa y el tren de la niebla",
+    "story": "Elsa descubrió una mañana que un tren pequeño había perdido su vapor de colores y solo dejaba una nube gris. El tren le pidió ayuda en voz baja, y juntos recorrieron un valle de niebla para recuperar las risas que hacen brillar el vapor.",
+    "choices": [
+      "Entrar al túnel de niebla",
+      "Recoger pufs de vapor de colores",
+      "Saludar a los animales del bosque",
+      "Pedir ayuda al viento del amanecer"
+    ]
+  },
+  {
+    "id": "rufo-linterna",
+    "title": "Rufo y la linterna de las estrellas",
+    "story": "Rufo, un cachorro dorado, vio caer pequeñas estrellas que se apagaban en la hierba. Con su linternita azul y mucha paciencia, decidió ayudarlas a volver a su lugar en el cielo antes del amanecer.",
+    "choices": [
+      "Pulir una estrella caída",
+      "Recorrer el río de luz en barquito",
+      "Subir la escalera de rayos de luna",
+      "Guardar las estrellas en una cesta"
+    ]
+  },
+  {
+    "id": "iris-arcoiris",
+    "title": "Iris y el arcoíris dormido",
+    "story": "Iris, una pequeña pintora, vio un arcoíris enorme pero gris que dormía sobre el valle. Con su paleta llena de colores y mucha paciencia, emprendió el viaje para devolverle la energía y el color.",
+    "choices": [
+      "Pintar la primera banda roja",
+      "Volar con la nube amiga",
+      "Atrapar gotas de lluvia de colores",
+      "Pedir ayuda a los pájaros del valle"
+    ]
+  },
+  {
+    "id": "tito-orquesta",
+    "title": "Tito y la orquesta del viento",
+    "story": "Tito, un pajarito con pajarita roja, notó que el bosque había olvidado sus sonidos. Con su silbato de madera, decidió reunir campanas, ríos y viento para devolverle la música al bosque.",
+    "choices": [
+      "Despertar la campana de flores",
+      "Tocar piedras junto al río",
+      "Sacudir las semillas con los estorninos",
+      "Pedir al viento que cante con él"
+    ]
+  },
+  {
+    "id": "valle-fogata",
+    "title": "Valle y la fogata del bosque",
+    "story": "Valle, un osito con bufanda verde, encendió una pequeña fogata una noche fría. En lugar de guardarla solo, decidió invitar a los animales del bosque para compartir calor y luz.",
+    "choices": [
+      "Invitar a un conejo y un búho",
+      "Recoger leña junto a los amigos",
+      "Abrigar a un patito con una mantita",
+      "Reunir historias alrededor del fuego"
+    ]
+  },
+  {
+    "id": "lina-faro",
+    "title": "Lina y el faro de los susurros",
+    "story": "Lina subió al faro de la costa y encontró su gran luz apagada y un poco triste. Con cariño y paciencia, emprendió el camino para darle energía y guiar a los barcos que esperaban el camino de vuelta a casa.",
+    "choices": [
+      "Subir y limpiar los ventanales",
+      "Abrazar el farol con palabras amables",
+      "Encender la luz hacia el mar",
+      "Pedir ayuda a las olas"
+    ]
+  },
+  {
+    "id": "mili-lluvia",
+    "title": "Mili y el jardín de las lágrimas",
+    "story": "Mili, con su regadera plateada, encontró un jardín reseco y triste. Una nube pequeña lloraba suavemente encima, y Mili ideó un plan para recolectar cada gota de lluvia y despertar las semillas.",
+    "choices": [
+      "Plantar semillas en círculos",
+      "Recoger gotas con su regadera",
+      "Compartir agua con las flores",
+      "Agradecer a la nube amiga"
+    ]
+  },
+  {
+    "id": "paco-tren",
+    "title": "Paco y el tren del desierto",
+    "story": "Paco, un pequeño explorador, encontró un tren que cruzaba el desierto con la luz parpadeante. Al subir a la cabina, descubrió que el tren no sabía llegar al pueblo de colores sin su ayuda y una chispa de amistad.",
+    "choices": [
+      "Atravesar el túnel violeta",
+      "Detenerse en el oasis a repostar",
+      "Viajar bajo las estrellas",
+      "Buscar el pueblo de luces"
+    ]
+  },
+  {
+    "id": "duna-mariposas",
+    "title": "Duna y las mariposas de cristal",
+    "story": "Duna, con su jarrita de tapa dorada, entró a un bosque donde las mariposas eran de cristal y apenas brillaban. Pronto notó que necesitaban pequeñas chispas de calma para volver a encenderse.",
+    "choices": [
+      "Seguir el sendero de huellas de luz",
+      "Ayudar a una mariposa cansada",
+      "Recoger chispas del estanque",
+      "Dejar luz en el árbol gigante"
+    ]
+  },
+  {
+    "id": "coa-luciernagas",
+    "title": "Coa y el río de las luciérnagas",
+    "story": "Coa, con su linterna redonda, encontró un río donde las luciérnagas se apagaban al atardecer. Con mucho cuidado, empezó a devolver luz a cada bichito para que la noche volviera a brillar.",
+    "choices": [
+      "Cruzar el puentecito de madera",
+      "Despertar un brillo escondido",
+      "Encender las flores de noche",
+      "Liberar las luciérnagas juntas"
+    ]
+  },
+  {
+    "id": "nilo-globo",
+    "title": "Nilo y el globo de las islas",
+    "story": "Nilo, con sus gafas de aviador, viaja en un globo arcoíris por islas que flotan sobre las nubes. Una de ellas perdió su puente y las aves de papel no saben volver a casa.",
+    "choices": [
+      "Aterrizar en la isla de los caracoles",
+      "Tender un puente de cuerda",
+      "Atravesar la tormenta de nubes",
+      "Pedir ayuda al viento"
+    ]
+  },
+  {
+    "id": "tara-barco",
+    "title": "Tara y el barco de papel",
+    "story": "Tara, una marinera valiente con pañuelo rojo, navega un enorme barco de papel por un océano azul profundo. Los delfines saltan alegres y la guían hacia el puerto luminoso.",
+    "choices": [
+      "Cabalgar una ola gigante",
+      "Leer el mapa bajo la luna",
+      "Navegar la tormenta de plata",
+      "Seguir a los delfines"
+    ]
+  },
+  {
+    "id": "simon-teleferico",
+    "title": "Simón y el teleférico de los volcanes",
+    "story": "Simón, un niño andino con su llama amiga, sube en un teleférico de colores hacia un volcán que, en vez de lava, brota flores suaves. Los pueblos pequeños esperan su luz en la cima.",
+    "choices": [
+      "Alcanzar el borde del volcán",
+      "Seguir a las marmotas doradas",
+      "Encender el farol en la cumbre",
+      "Bajar por el teleférico"
+    ]
+  },
+  {
+    "id": "nora-nieve",
+    "title": "Nora y el tren de la nieve",
+    "story": "Nora, con su abrigo escarlata, viaja en un tren pequeño que cruza un bosque cubierto de nieve. Zorros blancos y búhos tímidos se asoman para que el tren deje una lucecita cálida.",
+    "choices": [
+      "Saludar a los zorros blancos",
+      "Atravesar el túnel de cristal",
+      "Patinar en el lago congelado",
+      "Llegar al pueblo brillante"
+    ]
+  },
+  {
+    "id": "gabo-selva",
+    "title": "Gabo y los puentes de la selva",
+    "story": "Gabo, un explorador con su loro rojo, cruza la selva ayudando a conectar puentes de liana. Un tapir tímido no se atreve a pasar y todos esperan que el puente quede firme.",
+    "choices": [
+      "Cruzar el puente de lianas",
+      "Ayudar al tapir a pasar",
+      "Reparar el puente con los monos",
+      "Bajar por la hoja gigante"
+    ]
+  },
+  {
+    "id": "lolo-luna",
+    "title": "Lolo y la luna de papel",
+    "story": "Lolo, un pequeño conejo sastre con anteojos, encontró la luna de papel rota y apagada. Con hilo de plata y mucha paciencia, decide repararla para que la noche vuelva a brillar.",
+    "choices": [
+      "Coser parches de luz de plata",
+      "Subir la escalera de estrellas",
+      "Colgar un farol de estrellas",
+      "Bordar nubes pequeñas"
+    ]
+  },
+  {
+    "id": "fer-reloj",
+    "title": "Fer y el reloj de arenas doradas",
+    "story": "Fer, un pequeño duende relojero, ordena los relojes de su taller. Un reloj de arena perdió sus arenas doradas y las horas dejaron de sonar. Fer debe encontrarlas.",
+    "choices": [
+      "Vaciar nuevas arenas",
+      "Reparar el muelle de la caja musical",
+      "Afinar las campanas pequeñas",
+      "Dar cuerda al gran reloj"
+    ]
+  },
+  {
+    "id": "mira-faroles",
+    "title": "Mira y los faroles flotantes",
+    "story": "Mira, con su kimono de flores, suelta faroles encendidos sobre el río al anochecer. Algunos cayeron entre los juncos y deben ser recogidos para que la fiesta de luz siga su curso.",
+    "choices": [
+      "Recoger los faroles del juncal",
+      "Encender faroles en el puente",
+      "Subir a la colina a soltarlos",
+      "Seguir el río de luces"
+    ]
+  },
+  {
+    "id": "tomas-bruma",
+    "title": "Tomás y el dragón de bruma",
+    "story": "Tomás, un niño silencioso con su bufanda verde, monta a un dragón hecho de niebla de mirada amable. Juntos guían barquitos entre los acantilados y descubren un valle escondido.",
+    "choices": [
+      "Volar hasta la cueva del mar",
+      "Ayudar a los barquitos con niebla",
+      "Ver los espíritus de la pradera",
+      "Formar un arcoíris de niebla"
+    ]
+  },
+  {
+    "id": "elif-estrellas",
+    "title": "Elif y la tienda de estrellas",
+    "story": "Elif, una niña observadora con su bufanda de estrellas, vende estrellitas brillantes en su puesto del tejado. Esta noche debe juntar fragmentos caídos para encender constelaciones nuevas.",
+    "choices": [
+      "Encender el farol del tejado",
+      "Recoger fragmentos de estrellas",
+      "Ordenar los frascos de luz",
+      "Dejar florar las constelaciones"
+    ]
+  },
+  {
+    "id": "dulce-helados",
+    "title": "Dulce y la heladería de los sabores",
+    "story": "Dulce, una niña pastelera con delantal rosa, recuerda la receta de un sabor olvidado de la heladería del pueblo. Debe mezclar pasteles de colores que regalen sonrisas.",
+    "choices": [
+      "Buscar en la despensa de frascos",
+      "Repartir helados en la plaza",
+      "Mezclar el jarabe especial",
+      "Encender las velas de la mesa"
+    ]
+  },
+  {
+    "id": "pipi-chocolate",
+    "title": "Pipi y el río de chocolate",
+    "story": "Pipi, un conejito chef regordete, navega un barquito de granos de cacao por un río de chocolate fundido. Debe llegar al pueblo de jengibre para compartir una gran receta.",
+    "choices": [
+      "Bajar la catarata de chocolate",
+      "Visitar el pueblo de jengibre",
+      "Mezclar el gran tazón",
+      "Compartir la mesa dulce"
+    ]
+  },
+  {
+    "id": "coco-frutas",
+    "title": "Coco y el mercado de frutas mágicas",
+    "story": "Coco, un monito con su cesta de mimbre, recorre el mercado de frutas que brillan en la jungla. Reparte mangos y bayas para que todas las flores canten.",
+    "choices": [
+      "Recoger bayas y mangos",
+      "Columpiarse entre las palmeras",
+      "Encender la fiesta de luces",
+      "Compartir las frutas"
+    ]
+  },
+  {
+    "id": "bella-algodon",
+    "title": "Bella y la fábrica de algodón de azúcar",
+    "story": "Bella, una niña con vestido rosa, trabaja en la fábrica que fabrica algodón de azúcar gigante. Debe ajustar la máquina para que las nubes dulces vuelvan a volar.",
+    "choices": [
+      "Hilar la nube de azúcar",
+      "Ajustar la máquina de nubes",
+      "Compartir las nubes en la feria",
+      "Subir a la torre de dulces"
+    ]
+  },
+  {
+    "id": "kaya-tortugas",
+    "title": "Kaya y el lago de las tortugas",
+    "story": "Kaya, una niña tranquila en vestido verde azul, recorre un lago jade montada en una tortuga gigante y amable. Deben despertar las flores de luna que crecen en las orillas.",
+    "choices": [
+      "Visitar la isla de los bebés tortuga",
+      "Escuchar a las sirenas del loto",
+      "Encender los lirios de la noche",
+      "Regresar al atardecer"
+    ]
+  },
+  {
+    "id": "tomi-arboles",
+    "title": "Tomi y los árboles que cantan",
+    "story": "Tomi, un niño jardinero con sombrero de paja, cuida árboles cuyas hojas cantan melodías. Una semilla nueva debe germinar para que el huerto recupere su canción.",
+    "choices": [
+      "Cantar a las semillas",
+      "Plantar la semilla que canta",
+      "Tocar la flauta de hojas",
+      "Reunir el coro del atardecer"
+    ]
+  },
+  {
+    "id": "estela-coral",
+    "title": "Estela y el jardín bajo el mar",
+    "story": "Estela, con su casco de cristal, nada por un jardín submarino de corales y algas. Un coral se está cerrando y de ella depende que regrese la alegría al arrecife.",
+    "choices": [
+      "Regar el jardín de corales",
+      "Jugar al escondite con los peces",
+      "Encender las conchas de la noche",
+      "Subir con burbujas de luz"
+    ]
+  },
+  {
+    "id": "rui-colibries",
+    "title": "Rui y los colibríes de cristal",
+    "story": "Rui, un niño músico con su flauta, acaricia a tres colibríes de cristal que tocan notas al rozar las flores. Debe reunir las melodías esparcidas por el jardín.",
+    "choices": [
+      "Tocar las flores de pétalos",
+      "Seguir la cascada que canta",
+      "Cantar la canción de la tarde",
+      "Formar el arcoíris de colibríes"
+    ]
+  },
+  {
+    "id": "sami-volcan",
+    "title": "Sami y el volcán de flores",
+    "story": "Sami, una niña con corona de flores, sube un volcán cubierto de pétalos que brillan suavemente. En su interior hay un cráter de semillas que alumbran el valle.",
+    "choices": [
+      "Recorrer el camino de pétalos",
+      "Recoger semillas del cráter",
+      "Atrapar la lluvia de flores",
+      "Encender el volcán de luz"
+    ]
+  },
+  {
+    "id": "bea-semillas",
+    "title": "Bea y la lluvia de semillas estelares",
+    "story": "Bea, con su bolsita de semillas que brillan, esparce luz por una pradera violeta. Las semillas flotan como estrellas lentas y deben florecer para crear constelaciones.",
+    "choices": [
+      "Sembrar a lo largo del camino",
+      "Montar en el cometa de pétalos",
+      "Cosechar flores de estrella",
+      "Florecer el cielo entero"
+    ]
+  }
+]

@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-15T00:00:00.000Z",
+  "title": "Design System: Aventuras Píxel",
+  "extensions": {
+    "colorMeta": {
+      "ink-navy": { "role": "neutral", "displayName": "Tinta azul marino", "canonical": "#1d2b53", "tonalRamp": ["oklch(15% 0.06 265)","oklch(26% 0.06 265)","oklch(37% 0.06 265)","oklch(48% 0.06 265)","oklch(59% 0.06 265)","oklch(70% 0.06 265)","oklch(82% 0.06 265)","oklch(95% 0.06 265)"] },
+      "parchment": { "role": "neutral", "displayName": "Pergamino", "canonical": "#fff1e8", "tonalRamp": ["oklch(15% 0.025 55)","oklch(26% 0.025 55)","oklch(37% 0.025 55)","oklch(48% 0.025 55)","oklch(59% 0.025 55)","oklch(70% 0.025 55)","oklch(82% 0.025 55)","oklch(95% 0.025 55)"] },
+      "courage-orange": { "role": "secondary", "displayName": "Naranja de valentía", "canonical": "#ffa300", "tonalRamp": ["oklch(15% 0.15 65)","oklch(26% 0.15 65)","oklch(37% 0.15 65)","oklch(48% 0.15 65)","oklch(59% 0.15 65)","oklch(70% 0.15 65)","oklch(82% 0.15 65)","oklch(95% 0.15 65)"] },
+      "retry-coral": { "role": "tertiary", "displayName": "Coral de reintento", "canonical": "#ff004d", "tonalRamp": ["oklch(15% 0.2 18)","oklch(26% 0.2 18)","oklch(37% 0.2 18)","oklch(48% 0.2 18)","oklch(59% 0.2 18)","oklch(70% 0.2 18)","oklch(82% 0.2 18)","oklch(95% 0.2 18)"] },
+      "friendship-green": { "role": "secondary", "displayName": "Verde de amistad", "canonical": "#00e436", "tonalRamp": ["oklch(15% 0.17 145)","oklch(26% 0.17 145)","oklch(37% 0.17 145)","oklch(48% 0.17 145)","oklch(59% 0.17 145)","oklch(70% 0.17 145)","oklch(82% 0.17 145)","oklch(95% 0.17 145)"] },
+      "ingenuity-sky": { "role": "primary", "displayName": "Azul cielo de ingenio", "canonical": "#29adff", "tonalRamp": ["oklch(15% 0.13 240)","oklch(26% 0.13 240)","oklch(37% 0.13 240)","oklch(48% 0.13 240)","oklch(59% 0.13 240)","oklch(70% 0.13 240)","oklch(82% 0.13 240)","oklch(95% 0.13 240)"] },
+      "night-grape": { "role": "secondary", "displayName": "Uva nocturna", "canonical": "#7e2553", "tonalRamp": ["oklch(15% 0.09 342)","oklch(26% 0.09 342)","oklch(37% 0.09 342)","oklch(48% 0.09 342)","oklch(59% 0.09 342)","oklch(70% 0.09 342)","oklch(82% 0.09 342)","oklch(95% 0.09 342)"] },
+      "reward-gold": { "role": "primary", "displayName": "Dorado de recompensa", "canonical": "#ffec27", "tonalRamp": ["oklch(15% 0.15 95)","oklch(26% 0.15 95)","oklch(37% 0.15 95)","oklch(48% 0.15 95)","oklch(59% 0.15 95)","oklch(70% 0.15 95)","oklch(82% 0.15 95)","oklch(95% 0.15 95)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Pixel Display", "purpose": "Aperturas de etapa." },
+      "headline": { "displayName": "Pixel Headline", "purpose": "Capítulos y preguntas." },
+      "body": { "displayName": "Child Reading Body", "purpose": "Narración infantil." },
+      "label": { "displayName": "Game Label", "purpose": "Acciones, progreso y estados." }
+    },
+    "shadows": [
+      { "name": "panel-offset", "value": "5px 5px 0 #1d2b53", "purpose": "Tarjetas y contenedores." },
+      { "name": "control-offset", "value": "4px 4px 0 #1d2b53", "purpose": "Botones e indicadores." },
+      { "name": "selected-path", "value": "9px 9px 0 #ffec27", "purpose": "Decisión seleccionada." },
+      { "name": "reward-lift", "value": "8px 8px 0 #1d2b53", "purpose": "Evaluación y recompensa." }
+    ],
+    "motion": [
+      { "name": "card-hover", "value": "transform 120ms ease-out", "purpose": "Eleva la tarjeta disponible." },
+      { "name": "mechanical-press", "value": "translate(5px, 5px)", "purpose": "Cierra la distancia de la sombra." },
+      { "name": "reward-pop", "value": "450ms cubic-bezier(.16,1,.3,1)", "purpose": "Presenta el trofeo." },
+      { "name": "portrait-choice", "value": "350ms cubic-bezier(.16,1,.3,1)", "purpose": "Hace visible la expresión ligada a la decisión." },
+      { "name": "reduced-motion", "value": "0.01ms", "purpose": "Neutraliza movimiento bajo preferencia del sistema." }
+    ],
+    "breakpoints": [
+      { "name": "stack", "value": "900px" },
+      { "name": "compact", "value": "620px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action", "kind": "button", "refersTo": "button-primary",
+      "description": "Acción dorada que inicia o continúa una etapa.",
+      "html": "<button class=\"ds-primary\">CONTINUAR</button>",
+      "css": ".ds-primary{min-height:52px;padding:14px 18px;border:3px solid #1d2b53;border-radius:0;background:#ffec27;color:#1d2b53;box-shadow:4px 4px 0 #1d2b53;font:400 .62rem/1.5 'Press Start 2P',monospace;cursor:pointer}.ds-primary:hover{transform:translate(-2px,-2px)}.ds-primary:focus-visible{outline:4px solid #ffec27;outline-offset:4px}.ds-primary:active{transform:translate(5px,5px);box-shadow:none}.ds-primary:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}"
+    },
+    {
+      "name": "Secondary Action", "kind": "button", "refersTo": "button-secondary",
+      "description": "Acción de regreso o revisión sobre pergamino.",
+      "html": "<button class=\"ds-secondary\">CAMBIAR DECISIONES</button>",
+      "css": ".ds-secondary{min-height:52px;padding:14px 18px;border:3px solid #1d2b53;border-radius:0;background:#fff1e8;color:#1d2b53;box-shadow:4px 4px 0 #1d2b53;font:400 .62rem/1.5 'Press Start 2P',monospace;cursor:pointer}.ds-secondary:hover{background:#ffec27}.ds-secondary:focus-visible{outline:4px solid #ffec27;outline-offset:4px}.ds-secondary:active{transform:translate(5px,5px);box-shadow:none}"
+    },
+    {
+      "name": "Segmented Skill Bar", "kind": "custom", "refersTo": "segmented-skill-bar",
+      "description": "Cinco bloques hacen visible el crecimiento.",
+      "html": "<div class=\"ds-skill\"><strong>INGENIO <b>3/5</b></strong><div class=\"ds-segments\"><i></i><i></i><i></i><i class=\"empty\"></i><i class=\"empty\"></i></div></div>",
+      "css": ".ds-skill{display:grid;gap:10px;color:#1d2b53}.ds-skill strong{display:flex;justify-content:space-between;font:400 .56rem/1.5 'Press Start 2P',monospace}.ds-segments{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}.ds-segments i{height:18px;border:3px solid #1d2b53;border-radius:0;background:#29adff}.ds-segments i.empty{background:#fff1e8}"
+    },
+    {
+      "name": "Chapter Progress", "kind": "nav", "refersTo": "chapter-progress",
+      "description": "Seis cuadrados muestran la posición narrativa.",
+      "html": "<nav class=\"ds-progress\" aria-label=\"Capítulo 3 de 6\"><span class=\"done\">1</span><span class=\"done\">2</span><span class=\"current\">3</span><span>4</span><span>5</span><span>6</span></nav>",
+      "css": ".ds-progress{display:flex;gap:12px}.ds-progress span{display:grid;place-items:center;width:38px;height:38px;border:3px solid #1d2b53;border-radius:0;background:#fff1e8;color:#1d2b53;font:400 .65rem 'Press Start 2P',monospace}.ds-progress .done{background:#00e436}.ds-progress .current{background:#ffec27;box-shadow:4px 4px 0 #1d2b53;transform:translate(-2px,-2px)}"
+    },
+    {
+      "name": "Story Library Card", "kind": "card", "refersTo": "story-library-card",
+      "description": "Portada GPT cuadrada con estado, duración y acción para uno de seis cuentos jugables.",
+      "html": "<article class=\"ds-story\"><div class=\"ds-cover\">✦</div><div class=\"ds-story-body\"><small>EN PROGRESO</small><h2>LA NUBE DE ENGRANAJES</h2><p>Una ciudad flotante ha perdido el compás de sus máquinas.</p><em>6 CAPÍTULOS · 2 PREGUNTAS</em><button>CONTINUAR →</button></div></article>",
+      "css": ".ds-story{display:flex;flex-direction:column;width:280px;border:4px solid #1d2b53;border-radius:0;background:#fff1e8;color:#1d2b53;box-shadow:5px 5px 0 #1d2b53}.ds-cover{display:grid;place-items:center;aspect-ratio:1;border-bottom:4px solid #1d2b53;background:#7e2553;color:#ffec27;font-size:64px;image-rendering:pixelated}.ds-story-body{display:flex;flex-direction:column;flex:1;padding:22px}.ds-story small,.ds-story em{color:#7e2553;font:normal .5rem/1.5 'Press Start 2P',monospace}.ds-story h2{font:400 .9rem/1.5 'Press Start 2P',monospace}.ds-story p{font:600 1rem/1.45 'Baloo 2',sans-serif}.ds-story button{width:100%;min-height:52px;margin-top:18px;padding:14px 18px;border:3px solid #1d2b53;border-radius:0;background:#ffec27;color:#1d2b53;box-shadow:4px 4px 0 #1d2b53;font:400 .62rem/1.5 'Press Start 2P',monospace;cursor:pointer}.ds-story button:hover{transform:translate(-2px,-2px)}.ds-story button:focus-visible{outline:4px solid #ffec27;outline-offset:4px}.ds-story button:active{transform:translate(5px,5px);box-shadow:none}"
+    },
+    {
+      "name": "Decision Card", "kind": "card", "refersTo": "decision-card",
+      "description": "Ruta seleccionable con habilidad y estado explícito.",
+      "html": "<button class=\"ds-decision\" aria-pressed=\"true\"><span class=\"ds-art\">✦</span><small>+1 AMISTAD</small><strong>Pedir ayuda para reparar el puente.</strong><em>✓ ELEGIDA</em></button>",
+      "css": ".ds-decision{display:grid;gap:14px;width:260px;padding:0 0 18px;border:4px solid #1d2b53;border-radius:0;background:#fff1e8;color:#1d2b53;box-shadow:9px 9px 0 #ffec27;text-align:left;transform:translate(-4px,-4px);cursor:pointer}.ds-art{display:grid;place-items:center;height:120px;border-bottom:4px solid #1d2b53;background:#7e2553;color:#ffec27;font-size:42px}.ds-decision small{width:max-content;margin:0 16px;padding:9px 11px;border:3px solid #1d2b53;background:#00e436;font:400 .57rem 'Press Start 2P',monospace}.ds-decision strong{padding:0 16px;font:700 1.13rem/1.4 'Baloo 2',sans-serif}.ds-decision em{padding:0 16px;font:normal .55rem 'Press Start 2P',monospace}.ds-decision:focus-visible{outline:4px solid #ffec27;outline-offset:4px}.ds-decision:active{transform:translate(5px,5px);box-shadow:none}"
+    },
+    {
+      "name": "Quiz Option", "kind": "button", "refersTo": "quiz-option",
+      "description": "Respuesta grande y reintentable.",
+      "html": "<button class=\"ds-quiz\">Porque entendió que necesitaba ayuda</button>",
+      "css": ".ds-quiz{width:100%;padding:18px;border:3px solid #1d2b53;border-radius:0;background:#fff1e8;color:#1d2b53;box-shadow:4px 4px 0 #1d2b53;font:400 .68rem/1.5 'Press Start 2P',monospace;text-align:left;cursor:pointer}.ds-quiz:hover{background:#ffec27}.ds-quiz:focus-visible{outline:4px solid #ffec27;outline-offset:4px}.ds-quiz:active{transform:translate(5px,5px);box-shadow:none}"
+    },
+    {
+      "name": "Reward Tile", "kind": "card", "refersTo": "reward-tile",
+      "description": "Materializa monedas, logros o el total histórico.",
+      "html": "<div class=\"ds-reward\"><span>★</span><small>XP GANADO</small><strong>+50 XP</strong></div>",
+      "css": ".ds-reward{display:grid;place-items:center;gap:10px;min-width:190px;padding:24px 16px;border:3px solid #1d2b53;border-radius:0;background:#fff1e8;color:#1d2b53;box-shadow:4px 4px 0 #1d2b53}.ds-reward span{color:#7e2553;font-size:36px}.ds-reward small,.ds-reward strong{font:400 .52rem/1.5 'Press Start 2P',monospace}.ds-reward strong{font-size:.62rem}.ds-reward:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #1d2b53}"
+    }
+  ],
+  "narrative": {
+    "northStar": "La consola de héroes intercambiables",
+    "overview": "Aventuras Píxel convierte la lectura en una travesía RPG visible y táctil. El niño elige un personaje y luego uno de seis cuentos jugables, atraviesa seis capítulos, puede sustituir cualquiera de sus decisiones y ve cómo las tres habilidades del personaje crecen bloque a bloque. Perfil y Cuentos son destinos separados: la biblioteca organiza la elección, pero cada portada abre una aventura completa en vez de una galería pasiva.\n\nEl mundo es una consola infantil construida con la paleta PICO-8 de ocho colores, pergamino, contornos azul marino duros y paneles cuadrados. La ilustración pixel art contiene la fantasía; la interfaz conserva la claridad mecánica de un juego con estados presionados, progreso segmentado y recompensas persistentes.",
+    "keyCharacteristics": [
+      "Nia lidera un roster de seis personajes: tres humanos comparten geometría y dragón, robot y espíritu tienen siluetas propias.",
+      "Siete pantallas forman el recorrido: personajes, perfil, biblioteca, capítulo, decisión, preguntas y recompensa.",
+      "Seis cuentos de prueba jugables contienen seis capítulos y dieciocho caminos cada uno; cada elección suma una habilidad y puede reemplazarse.",
+      "Dos preguntas reintentables entregan 1 y 2 monedas; el cierre muestra monedas, habilidades y logros.",
+      "La persistencia local convierte cada sesión en crecimiento acumulado.",
+      "Seis portadas GPT, una por cuento, comparten recorte cuadrado, borde duro y tratamiento pixel-art.",
+      "El retrato fijo expresa neutral, courage, wit y friend con un rebote breve al elegir."
+    ],
+    "rules": [
+      { "name": "The Eight-Color Cartridge Rule", "body": "No se introduce un noveno color, degradado, transparencia cromática o blanco independiente.", "section": "colors" },
+      { "name": "The Skill Is Color Rule", "body": "Valentía es naranja, Ingenio es cielo y Amistad es verde en todo el sistema.", "section": "colors" },
+      { "name": "The Two-Voice Rule", "body": "Press Start 2P nunca absorbe párrafos; Baloo 2 nunca sustituye la señalética mecánica.", "section": "typography" },
+      { "name": "The Playable Shelf Rule", "body": "La biblioteca puede usar una cuadrícula de portadas, pero cada tarjeta debe comunicar estado, duración y una acción inmediata para comenzar, continuar o volver a jugar; nunca es una galería pasiva.", "section": "layout" },
+      { "name": "The Mechanical Depth Rule", "body": "Toda sombra es dura; al presionar, el control avanza 5px y la sombra desaparece.", "section": "elevation" },
+      { "name": "The No-Radius Rule", "body": "El radio es siempre cero. No se redondea ningún componente.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do convierte cada elección en progreso visible de Valentía, Ingenio o Amistad.",
+      "Do conserva los ocho colores exactos, contornos azul marino e imágenes pixeladas.",
+      "Do mantiene al personaje seleccionado y sus habilidades como protagonistas de la experiencia.",
+      "Do mantiene Perfil y Cuentos como destinos separados y devuelve Guardar y salir a la biblioteca.",
+      "Do usa una portada GPT pixel-art distinta para cada uno de los seis cuentos jugables.",
+      "Do separa fondo de lectura, sprite del personaje e imagen de decisión reutilizable.",
+      "Do permite reemplazar decisiones, reintentar preguntas y conservar progreso local.",
+      "Do combina color con forma, texto o posición para cada estado.",
+      "Do respeta `prefers-reduced-motion` y foco visible."
+    ],
+    "donts": [
+      "Don't conviertas la biblioteca en una galería pasiva: toda portada debe conducir a un cuento completo y mostrar su estado.",
+      "Don't introduzcas radios, sombras difusas, degradados o vidrio.",
+      "Don't intercambies Press Start 2P y Baloo 2 fuera de sus roles.",
+      "Don't uses color sin significado de habilidad, estado, ambiente o recompensa.",
+      "Don't bloquees al niño por un error ni trates una elección como equivocada.",
+      "Don't superpongas texto largo sobre pixel art."
+    ]
+  }
+}

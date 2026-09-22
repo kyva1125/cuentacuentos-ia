@@ -1,0 +1,19 @@
+{
+  "name": "cuentos-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --env-file=.env index.js",
+    "migrate:pixel-progress": "node --env-file=.env migrate-pixel-progress.js",
+    "test:pixel-progress": "node --env-file=.env tests/pixel-progress.test.mjs"
+  },
+  "dependencies": {
+    "basic-ftp": "^6.2.1",
+    "bcryptjs": "^3.0.3",
+    "cors": "2.8.5",
+    "express": "^4.22.2",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.23.0"
+  }
+}

@@ -1,0 +1,17 @@
+node_modules
+dist
+.runtime
+.playwright-mcp
+.impeccable
+.ua
+.gamemaker-mcp
+.zed
+src/assets/archive
+src/assets/mvp-sheets
+src/assets/mvp-stories
+src/assets/nia-sendero
+src/assets/character-concepts
+src/assets/characters
+src/assets/talents
+src/assets/*-v2.png
+!src/assets/hero-levels-v2.png

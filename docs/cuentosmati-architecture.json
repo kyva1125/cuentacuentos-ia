@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": { "title": "CuentosMati explicado: de una elección a un cuento", "quality_profile": "showcase", "viewBox": [1050, 600] },
+  "components": [
+    { "id": "child", "type": "external", "label": "Niño o niña", "sublabel": "elige, lee y decide", "pos": [30, 250], "size": [130, 64] },
+    { "id": "react", "type": "frontend", "label": "App React", "sublabel": "App.tsx + componentes", "tag": "pantallas", "pos": [240, 250], "size": [145, 64] },
+    { "id": "catalog", "type": "database", "label": "Catálogo incluido", "sublabel": "cuentos ya escritos", "tag": "sin IA", "pos": [240, 90], "size": [145, 64] },
+    { "id": "local", "type": "database", "label": "localStorage", "sublabel": "progreso y cuentos locales", "tag": "sin conexión", "pos": [240, 410], "size": [145, 64] },
+    { "id": "api", "type": "backend", "label": "Servidor Node", "sublabel": "/api/stories y /api/continue", "tag": "cuento nuevo", "pos": [475, 250], "size": [160, 64] },
+    { "id": "images", "type": "cloud", "label": "OpenAI Images", "sublabel": "ilustración opcional", "tag": "imagen", "pos": [475, 90], "size": [160, 64] },
+    { "id": "account", "type": "database", "label": "Cuenta de adulto", "sublabel": "sesión, créditos y copia remota", "tag": "opcional", "pos": [720, 410], "size": [180, 64] },
+    { "id": "reader", "type": "frontend", "label": "Lector", "sublabel": "capítulos, opciones y rasgos", "tag": "resultado", "pos": [720, 250], "size": [180, 64] }
+  ],
+  "connections": [
+    { "from": "child", "to": "react", "label": "usa" },
+    { "from": "react", "to": "catalog", "label": "abre cuento existente", "variant": "dashed" },
+    { "from": "react", "to": "api", "label": "pide cuento nuevo", "variant": "emphasis" },
+    { "from": "api", "to": "images", "label": "genera ilustración", "variant": "dashed" },
+    { "from": "api", "to": "reader", "label": "capítulo", "variant": "emphasis", "labelDy": 56 },
+    { "from": "react", "to": "local", "label": "guarda avance", "variant": "dashed", "labelDy": 24 },
+    { "from": "local", "to": "account", "label": "sincroniza si hay sesión", "variant": "dashed" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Dos rutas", "items": ["Catálogo: contenido ya viene con la app", "Aventura nueva: React solicita texto al servidor"] },
+    { "dot": "emerald", "title": "Al decidir", "items": ["Cada elección guía el siguiente capítulo", "El lector actualiza rasgos y progreso"] },
+    { "dot": "amber", "title": "No perder el avance", "items": ["localStorage conserva una copia incluso sin internet", "La cuenta permite guardar también en el backend"] }
+  ]
+}

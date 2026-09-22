@@ -1,0 +1,47 @@
+acita-backend.benielstudio.app {
+  reverse_proxy acita-backend:5000
+}
+
+kepchu-backend.benielstudio.app {
+  reverse_proxy kepchu-backend:5000
+}
+
+acata-backend.benielstudio.app {
+  encode gzip zstd
+  reverse_proxy acata-backend:5000
+}
+
+gestioncontable-backend.benielstudio.app {
+	encode gzip zstd
+	reverse_proxy gestioncontable-backend:5000
+}
+
+nimbo-backend.benielstudio.app {
+  encode gzip zstd
+  reverse_proxy nimbo-api:5000
+}
+
+littlelanguage-backend.benielstudio.app {
+  encode gzip zstd
+  reverse_proxy lll-proxy-api-1:5000
+}
+
+portainer.benielstudio.app {
+  encode gzip zstd
+  reverse_proxy portainer:9000
+}
+
+qr.benielstudio.app {
+  encode gzip zstd
+  reverse_proxy beniel-bot:3000
+}
+
+lingora-backend.benielstudio.app {
+  encode gzip zstd
+  reverse_proxy lll-proxy-api-1:5000
+}
+
+maticuentos-api.benielstudio.app {
+  encode gzip zstd
+  reverse_proxy 172.20.0.1:3100
+}

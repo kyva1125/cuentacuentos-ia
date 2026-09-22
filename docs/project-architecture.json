@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Cuentos Imaginados — arquitectura local",
+    "quality_profile": "showcase",
+    "viewBox": [1180, 700],
+    "views": [
+      {
+        "id": "reading-flow",
+        "label": "Lectura y creación",
+        "focus": ["families", "web-app", "story-data", "illustrations"],
+        "note": "La experiencia principal sucede en la app React y mantiene el progreso del cuento en el navegador."
+      },
+      {
+        "id": "family-accounts",
+        "label": "Cuentas familiares",
+        "focus": ["families", "web-app", "express-api", "postgres"],
+        "note": "El backend local gestiona adultos, perfiles infantiles, créditos y estado persistente."
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "families",
+      "type": "external",
+      "label": "Familias",
+      "sublabel": "Navegador web o móvil",
+      "pos": [40, 300],
+      "size": [140, 68]
+    },
+    {
+      "id": "web-app",
+      "type": "frontend",
+      "label": "App React + Vite",
+      "sublabel": "Cuentos, decisiones y progreso",
+      "pos": [250, 300],
+      "size": [170, 68]
+    },
+    {
+      "id": "story-data",
+      "type": "database",
+      "label": "localStorage",
+      "sublabel": "Cuentos y progreso local",
+      "pos": [490, 150],
+      "size": [165, 68]
+    },
+    {
+      "id": "illustrations",
+      "type": "cloud",
+      "label": "Ilustraciones WebP",
+      "sublabel": "Recursos estáticos del proyecto",
+      "pos": [490, 450],
+      "size": [165, 68]
+    },
+    {
+      "id": "express-api",
+      "type": "backend",
+      "label": "API Express local",
+      "sublabel": "Adultos, perfiles y créditos",
+      "pos": [740, 300],
+      "size": [170, 68]
+    },
+    {
+      "id": "postgres",
+      "type": "database",
+      "label": "PostgreSQL",
+      "sublabel": "Cuentas y libro mayor",
+      "pos": [980, 300],
+      "size": [160, 68]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "PC local de desarrollo (Nicky)",
+      "wraps": ["web-app", "story-data", "illustrations", "express-api", "postgres"],
+      "pad": 24
+    }
+  ],
+  "connections": [
+    {
+      "id": "families-to-app",
+      "from": "families",
+      "to": "web-app",
+      "label": "HTTP",
+      "variant": "emphasis"
+    },
+    {
+      "id": "app-to-local-storage",
+      "from": "web-app",
+      "to": "story-data",
+      "label": "guardar / reanudar",
+      "fromSide": "top",
+      "toSide": "left"
+    },
+    {
+      "id": "app-to-images",
+      "from": "web-app",
+      "to": "illustrations",
+      "label": "cargar escenas",
+      "fromSide": "bottom",
+      "toSide": "left"
+    },
+    {
+      "id": "app-to-api",
+      "from": "web-app",
+      "to": "express-api",
+      "label": "API de cuentas",
+      "variant": "emphasis"
+    },
+    {
+      "id": "api-to-postgres",
+      "from": "express-api",
+      "to": "postgres",
+      "label": "SQL transaccional",
+      "labelDy": 58
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Experiencia infantil",
+      "items": ["React muestra el catálogo, cada capítulo y sus decisiones.", "El progreso y los cuentos sin cuenta viven en localStorage."]
+    },
+    {
+      "dot": "emerald",
+      "title": "Cuentas familiares",
+      "items": ["Express protege adultos, perfiles infantiles y créditos.", "PostgreSQL conserva el saldo y su libro mayor."]
+    },
+    {
+      "dot": "amber",
+      "title": "Desarrollo",
+      "items": ["Frontend y backend corren localmente en la PC.", "El deploy aprobado va directamente a producción en MONICA."]
+    }
+  ]
+}

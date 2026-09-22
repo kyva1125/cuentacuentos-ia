@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: cuentos-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: cuentos
+      POSTGRES_USER: cuentos_app
+      POSTGRES_PASSWORD: cuentos_local_only
+    ports:
+      - "55432:5432"
+    volumes:
+      - cuentos-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  cuentos-postgres-data:

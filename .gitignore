@@ -27,3 +27,13 @@ _tryimage/
 scripts/branch-gen/output/
 scripts/branch-gen/run.log
 scripts/branch-gen/dev.log
+
+__pycache__/
+*.pyc
+
+# Arte retirado (pixel art v2/v3): la app ya no lo importa y
+# scripts/verify-mvp-library.mjs lo prohíbe. Queda solo en disco local.
+src/assets/illustrations-v3/
+src/assets/style-v2/
+.generador/mundos/
+.generador/estilo-referencia.png

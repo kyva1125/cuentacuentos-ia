@@ -15,3 +15,9 @@ src/assets/characters
 src/assets/talents
 src/assets/*-v2.png
 !src/assets/hero-levels-v2.png
+# Arte retirado y material del generador: no forman parte del build
+src/assets/illustrations-v3
+src/assets/style-v2
+.generador
+scripts/fable-gen
+tmp

@@ -1,52 +1,14 @@
-# Illustration style guide
+# Guía de ilustración del catálogo
 
-## Canonical reference
+La referencia vigente es `luma-arrecife-cristal` y el estilo aprobado por Nick en septiembre de 2026: ilustración de cuento en pixel art 2D, píxeles nítidos, contornos oscuros y colores intensos. La referencia visual está en `.generador/estilo-referencia.png`; la ficha de personajes y mundos, en `.generador/ficha.json`. Las reglas operativas completas están en `AGENTS.md`.
 
-Use the temporary Inés images as visual references only. New stories must have
-their own original scenes and characters; never reuse a finished illustration
-from another story.
+## Producción
 
-For the library workflow, use **GPT Image** and the pixel-art constraints
-below. The approved visual benchmark is the Nia Río Cantor scene supplied by
-Nick: crisp 2D pixel art with the character, a clear story action and a rich
-landscape in the same frame.
+- Generar el arte de este proyecto solo con la skill local `generador-local-imagenes` y los seis personajes de `src/assets/style-v2/characters/`.
+- Aprobar primero la portada cuadrada del cuento. Copiarla a `.generador/mundos/` y registrarla en la ficha antes de crear escenas.
+- Generar las escenas con `--personaje` para cada personaje visible y `--mundo` con la portada aprobada. Describir la acción y variar el encuadre.
+- Guardar las ilustraciones activas en WebP: portada en `src/assets/style-v2/` y 17 escenas por cuento en `src/assets/illustrations-v3/` (apertura, capítulos 2 a 5 y tres opciones en cada capítulo 1 a 4).
+- Las escenas miden 1024 × 768. Revisar cada imagen antes de instalarla: identidad del personaje, acción de la opción, personajes duplicados, objetos ajenos y letras inventadas.
+- Evitar texto dentro de mapas, señales y planos. Usar rutas, formas o pictogramas cuando el cuento necesita información visual.
 
-Leonardo, FLUX and other image providers are not allowed in this project. GPT
-Image is the mandatory illustration engine for both library and dynamic art.
-
-## Visual language
-
-- Premium 2D pixel-art children’s-book illustration: crisp intentional pixels,
-  clean dark outlines, rich layered scenery and readable expressive faces.
-  Never painterly watercolor, glossy 3D or blurred/upscaled pixels.
-- Horizontal 16:9 composition for every scene.
-- Expressive children, layered tactile settings, and warm readable light.
-- Warm, rich color with calm and safe emotional stakes.
-- No text, letters, logos, watermarks, frightening imagery, or dangerous acts.
-
-## Consistency rules
-
-Before generating a story, define a character sheet: age, skin tone, hair,
-clothes, recurring prop, and palette. Repeat those details in every scene
-prompt. Keep each story’s setting and protagonist exclusive to that story.
-
-## Library asset exclusivity
-
-Each library story has seven unique images: one cover and six narrative scenes.
-Never use an image from another story as a cover, chapter, choice consequence,
-or ending. Asset filenames must start with the story identifier, and every
-generated asset must be recorded in that story's `chapterImages` before review.
-
-## Seven-scene storyboard
-
-1. Cover and setting
-2. Introduction
-3. Discovery of the mission
-4. Key decision
-5. Consequence or challenge
-6. Resolution and celebration
-7. Quiet emotional epilogue
-
-The Bruno pilot uses all seven pages: one cover followed by six distinct
-narrative scenes. The cover is not repeated inside the reader. Other existing
-library stories may remain at five pages until their six-scene sets are ready.
+No aplicar pixelado, cuantización ni aumento de brillo adicional a las salidas aprobadas. Para cambios en la receta visual del proyecto, modificar `.generador/` y comparar con la misma semilla antes y después.

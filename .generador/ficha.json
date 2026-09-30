@@ -1,0 +1,294 @@
+{
+  "proyecto": "cuentos-luma",
+  "descripcion": "Ilustraciones de los cuentos (Beniel Studio). Cada escena se genera a partir de los 6 personajes de la app y copia el estilo de estilo-referencia.png.",
+  "estilo": "classic illustrated fable book from the early 1900s, fine pen and ink linework with watercolor and gouache, warm cream aged paper, rich earthy tones with glowing warm accents, timeless storybook illustration, characters are cute young children, not pastel, not pixel art",
+  "estilo_ref": null,
+  "personaje": "",
+  "personajes": {
+    "nia": {
+      "nombre": "Nia",
+      "ref": "src/assets/fable/characters/nia.webp",
+      "descripcion": "explorer girl, brown hair in a ponytail, blue headband, blue scarf, green explorer jacket with a backpack, dark pants, brown boots",
+      "ref_pixel_anterior": "src/assets/style-v2/characters/nia-v2.png",
+      "anatomia": "Nia has exactly two arms and two legs"
+    },
+    "teo": {
+      "nombre": "Teo",
+      "ref": "src/assets/fable/characters/teo.webp",
+      "descripcion": "inventor boy, messy orange-brown hair, brass goggles on his head, cream shirt, maroon overalls with a wrench in the pocket, brown gloves and boots",
+      "ref_pixel_anterior": "src/assets/style-v2/characters/teo-v2.png",
+      "anatomia": "Teo has exactly two arms and two legs"
+    },
+    "luma": {
+      "nombre": "Luma",
+      "ref": "src/assets/fable/characters/luma.webp",
+      "descripcion": "girl with very long straight dark navy-blue hair, red headband, red scarf, light blue tunic with a brown belt and golden compass pendant, dark leggings, brown boots",
+      "ref_pixel_anterior": "src/assets/style-v2/characters/luma-v2.png",
+      "anatomia": "Luma has exactly two arms and two legs"
+    },
+    "rok": {
+      "nombre": "Rok",
+      "ref": "src/assets/fable/characters/rok.webp",
+      "descripcion": "friendly young green dragon, yellow horns, yellow belly, small green and yellow wings",
+      "ref_pixel_anterior": "src/assets/style-v2/characters/rok-v3.png",
+      "anatomia": "Rok has exactly two legs, two arms, two wings and one tail"
+    },
+    "bit": {
+      "nombre": "Bit",
+      "ref": "src/assets/fable/characters/bit.webp",
+      "descripcion": "small round white robot, black visor face with glowing blue eyes, blue antenna, blue ear pieces, glowing blue core on the chest, no nose, no mouth, no cheeks: the only face is the black visor with two glowing blue eyes",
+      "ref_pixel_anterior": "src/assets/style-v2/characters/bit-v3.png",
+      "anatomia": "Bit is a round white robot with two arms, two short legs, one antenna and a smooth metal back"
+    },
+    "suri": {
+      "nombre": "Suri",
+      "ref": "src/assets/fable/characters/suri.webp",
+      "descripcion": "forest spirit girl, pointed elf ears, long brown hair with leaves, green leaf cape and dress, beige skirt",
+      "ref_pixel_anterior": "src/assets/style-v2/characters/suri-v3.png",
+      "anatomia": "Suri has two arms and two small bare feet with no shoes"
+    },
+    "tula": {
+      "nombre": "Grandma Tula",
+      "ref": "src/assets/fable/secundarios/tula.webp",
+      "descripcion": "an old grandma tortoise (a real tortoise animal, not a human, not a dragon) with a big green domed shell, standing upright, small round glasses and a white flour apron",
+      "anatomia": "Tula is a round tortoise whose big domed shell covers her whole back down to the ground, with two thick stumpy tortoise legs and two arms"
+    },
+    "berta": {
+      "nombre": "Berta",
+      "ref": "src/assets/fable/secundarios/berta.webp",
+      "descripcion": "a white goat on four legs with small curved horns and a red scarf, a normal goat with no wings",
+      "anatomia": "Berta is a normal goat standing on four thin hooved legs"
+    },
+    "pipo": {
+      "nombre": "Pipo",
+      "ref": "src/assets/fable/secundarios/pipo.webp",
+      "descripcion": "a tiny round brown bat with very big ears and small pink wings, much smaller than Rok",
+      "anatomia": "Pipo has two wings, two small feet and is much smaller than Rok"
+    },
+    "erizo": {
+      "nombre": "the hedgehog",
+      "ref": "src/assets/fable/secundarios/erizo.webp",
+      "descripcion": "a small brown hedgehog standing on its back legs, a normal hedgehog with no horns and no wings",
+      "anatomia": "the hedgehog is a real round spiky hedgehog with a tiny tail"
+    },
+    "brillo": {
+      "nombre": "Brillo the seagull",
+      "ref": "src/assets/fable/secundarios/brillo.webp",
+      "descripcion": "a handsome elegant white seagull with shiny glossy feathers, grey wings and a charming smile, a normal seagull bird",
+      "anatomia": "Brillo is a seagull with two wings and two webbed feet"
+    },
+    "ermo": {
+      "nombre": "Don Ermo the hermit crab",
+      "ref": "src/assets/fable/secundarios/ermo.webp",
+      "descripcion": "a grumpy old hermit crab living in a big worn spiral sea shell, bushy eyebrows, two big claws, a normal hermit crab",
+      "anatomia": "Don Ermo is a small crab with two claws and thin legs, carrying his spiral shell"
+    },
+    "tino": {
+      "nombre": "Tino the otter",
+      "ref": "src/assets/fable/secundarios/tino.webp",
+      "descripcion": "a cheerful brown river otter standing on two legs, round face, whiskers, a normal otter animal",
+      "anatomia": "Tino is an otter with two arms and two legs"
+    },
+    "nacar": {
+      "nombre": "Nacar the sea turtle",
+      "ref": "src/assets/fable/secundarios/nacar.webp",
+      "descripcion": "a wise gentle green sea turtle with a patterned shell and four flippers, kind old eyes, a normal sea turtle",
+      "anatomia": "Nacar is a sea turtle with four flippers and a patterned shell"
+    },
+    "urraca": {
+      "nombre": "the magpie",
+      "ref": "src/assets/fable/secundarios/urraca.webp",
+      "descripcion": "a clever black and white magpie bird with a long tail and glossy blue-black wings, a normal magpie",
+      "anatomia": "the magpie is a bird with two wings and two thin legs"
+    },
+    "bruno": {
+      "nombre": "Bruno the beaver",
+      "ref": "src/assets/fable/secundarios/bruno.webp",
+      "descripcion": "a friendly brown beaver standing on two legs, big front teeth, flat paddle tail, a normal beaver",
+      "anatomia": "Bruno is a beaver with two arms and two legs"
+    },
+    "olivia": {
+      "nombre": "Olivia the owl",
+      "ref": "src/assets/fable/secundarios/olivia.webp",
+      "descripcion": "a wise old brown owl with round glasses-like eye rings and soft feathers, a normal owl bird",
+      "anatomia": "Olivia is an owl with two wings and two talons"
+    },
+    "tomas": {
+      "nombre": "Tomas the mole",
+      "ref": "src/assets/fable/secundarios/tomas.webp",
+      "descripcion": "a small velvety dark grey mole gardener with pink hands and nose, tiny eyes, wearing a little green apron, a normal mole",
+      "anatomia": "Tomas is a mole with two arms and two short legs"
+    },
+    "oruga": {
+      "nombre": "the giant caterpillar",
+      "ref": "src/assets/fable/secundarios/oruga.webp",
+      "descripcion": "a huge friendly plump green caterpillar with round segments, stubby legs and big hungry eyes",
+      "anatomia": "the giant caterpillar is a long segmented green caterpillar"
+    },
+    "lia": {
+      "nombre": "Lia the mouse",
+      "ref": "src/assets/fable/secundarios/lia.webp",
+      "descripcion": "a tiny grey mouse apprentice with big round ears, a pink nose and a small tool belt, a normal mouse",
+      "anatomia": "Lia is a tiny mouse with two arms and two legs, small enough to sit on a workbench"
+    },
+    "ada": {
+      "nombre": "Ada the ant",
+      "ref": "src/assets/fable/secundarios/ada.webp",
+      "descripcion": "a cheerful red ant standing on her back legs, two antennae, a small scarf, a normal ant",
+      "anatomia": "Ada is a small cartoon ant with six thin legs, two antennae and a round ant body, as small as a cat"
+    },
+    "pinto": {
+      "nombre": "Pinto the woodpecker",
+      "ref": "src/assets/fable/secundarios/pinto.webp",
+      "descripcion": "a lively woodpecker with a red cap, black and white feathers and a strong beak, a normal bird",
+      "anatomia": "Pinto is a woodpecker with two wings and two feet"
+    },
+    "pia": {
+      "nombre": "Pia the swallow",
+      "ref": "src/assets/fable/secundarios/pia.webp",
+      "descripcion": "a small elegant blue and white swallow with a forked tail and a red throat, a normal bird",
+      "anatomia": "Pia is a swallow bird with two wings"
+    },
+    "ruli": {
+      "nombre": "Ruli the frog",
+      "ref": "src/assets/fable/secundarios/ruli.webp",
+      "descripcion": "a small cute green frog with big golden eyes and a pale belly, a normal frog",
+      "anatomia": "Ruli is a frog with four legs"
+    },
+    "chispa": {
+      "nombre": "Chispa the squirrel",
+      "ref": "src/assets/fable/secundarios/chispa.webp",
+      "descripcion": "a nimble red squirrel with a big fluffy tail and tufted ears, a normal squirrel",
+      "anatomia": "Chispa is a squirrel with four legs"
+    },
+    "brisa": {
+      "nombre": "Brisa the hare",
+      "ref": "src/assets/fable/secundarios/brisa.webp",
+      "descripcion": "a slender light brown hare with long ears and long hind legs, a normal hare",
+      "anatomia": "Brisa is a hare with four legs and two long ears"
+    },
+    "lumi": {
+      "nombre": "Lumi the firefly",
+      "ref": "src/assets/fable/secundarios/lumi.webp",
+      "descripcion": "a tiny cute firefly with a softly glowing yellow tail light and small wings, a normal firefly",
+      "anatomia": "Lumi is a tiny firefly with a glowing tail"
+    },
+    "tobi": {
+      "nombre": "Tobi the field mouse",
+      "ref": "src/assets/fable/secundarios/tobi.webp",
+      "descripcion": "a small brown field mouse with big ears and a brave little face, a normal mouse",
+      "anatomia": "Tobi is a small mouse with two arms and two legs"
+    },
+    "cuervo": {
+      "nombre": "the crow",
+      "ref": "src/assets/fable/secundarios/cuervo.webp",
+      "descripcion": "a big glossy black crow with a round full belly and clever eyes, a normal crow",
+      "anatomia": "the crow is a bird with two wings and two feet"
+    }
+  },
+  "referencia": null,
+  "pixel_art": false,
+  "lora": 0,
+  "loras": [],
+  "sin_pixelar": true,
+  "tam": 1024,
+  "ancho": 1024,
+  "alto": 768,
+  "formato": "webp",
+  "encoder_fp4": true,
+  "modos": {
+    "escena": {},
+    "portada": {
+      "ancho": 1024,
+      "alto": 1024
+    }
+  },
+  "modo_por_defecto": "escena",
+  "aprobadas": [],
+  "objetivo_lora": 20,
+  "registro": [
+    {
+      "fecha": "2026-09-23",
+      "nota": "Formato 1344x768 + WebP sin perdida: rejilla exacta (dif 0,0, 32 colores), 7 KB frente a 24 KB en PNG"
+    },
+    {
+      "fecha": "2026-09-23",
+      "nota": "personaje corregido a la Luma real del proyecto; luma_ficha.png (Luma castana) fuera de aprobadas"
+    },
+    {
+      "fecha": "2026-09-23",
+      "nota": "hooks.py postproceso brillo 1.35 + color 1.15 (solo modo escena): brillo 124->173 (v3: 182), saturacion 150->161 (v3: 174), rejilla intacta (dif 0,0, 32 colores). Adoptado. Pendiente: la piel se aclara un poco."
+    },
+    {
+      "fecha": "2026-09-23",
+      "nota": "hooks.py: factor fijo 1,35 quemaba escenas de dia (portada arrecife: crudo V 204 ya por encima del objetivo -> piel rosa, cielo blanco). Cambiado a subir SOLO hasta el objetivo (V 182 / S 174, tope 1,35). Portada arrecife semilla 303 adoptada en src/assets/style-v2/luma-arrecife-cristal-cover-v3.webp. Pendiente: la piel tiende a rosa por la paleta de 32 colores."
+    },
+    {
+      "fecha": "2026-09-23",
+      "nota": "Cambio de metodo: multirreferencia (personaje de characters/ + estilo-referencia.png como ReferenceLatent sobre lienzo vacio). Sin pixelado ni 32 colores ni hook de brillo (Nick: 'muy brillosa y fea'). Prueba Luma+estilo: personaje identico dentro de la escena completa."
+    },
+    {
+      "fecha": "2026-09-23",
+      "nota": "Portada Arrecife rehecha con multirreferencia (Luma + estilo-referencia), semilla 11, 1024x1024, 132 KB WebP calidad 90. Prueba 2 personajes (Teo + Rok, semilla 5): ambos identicos a sus fichas en la misma escena. Tiempos: 17-33 s por imagen."
+    },
+    {
+      "fecha": "2026-09-23",
+      "nota": "Cuento completo luma-arrecife-cristal: 17 imagenes (5 escenas + 12 opciones) con --personaje luma + --mundo (2 laminas). 1 de 17 salio con Luma duplicada (chapter-3-choice-a), rehecha con semilla 132. Nick aprobo el estilo para TODO el proyecto."
+    },
+    {
+      "fecha": "2026-09-23",
+      "nota": "Arrecife rehecho en el estilo de la portada (Nick lo eligio sobre las laminas pastel): --mundo arrecife-portada (la propia portada aprobada como lamina). 17/17 con una sola Luma. Fallos: letras inventadas en un mapa (4-b, rehecha con 'no words, no letters') y opcion 'cruzar el puente' sin puente (1-a, rehecha). Texto reescrito para 8 anios: 35-44 palabras por pagina."
+    },
+    {
+      "fecha": "2026-09-23",
+      "nota": "Suri/Rok: prueba con misma semilla para separar la composicion del cover sin perder mundo ni estilo",
+      "semilla": 1366371976,
+      "modo": "escena",
+      "imagen": "F:/Proyectos/ComfyUI/salidas/suri-lago-reflejos-chapter-5-hook-test.webp"
+    },
+    {
+      "fecha": "2026-09-27",
+      "nota": "Fallos vistos en los cuentos de Rok: Rok con tres patas, Tula y Berta con cola de dragón o de perro, una niña con cola, un erizo que no era erizo. Cada personaje lleva ahora anatomia en la ficha y hooks.py la añade sola al prompt."
+    },
+    {
+      "fecha": "2026-09-27",
+      "nota": "Nombrar la cola en la anatomía (\"tiny tail\") hace que Flux pinte una cola grande. La anatomía solo describe lo que SÍ se ve."
+    },
+    {
+      "fecha": "2026-09-28",
+      "nota": "La cola en la anatomía de un secundario (\"one thin tail\") pasa al protagonista: Teo salió con cola de ratón en 8 escenas. Anatomía de secundarios sin mencionar colas."
+    },
+    {
+      "fecha": "2026-09-28",
+      "nota": "Revisión de 204 escenas: 64 fallos. Causas: colas que pasan del secundario al protagonista (Teo, Nia, Suri, Bit), personajes duplicados (lechuza, topo, ratón, Suri), Lía con tamaño humano, texto inventado. Anatomía general ampliada con \"every character appears only once\"."
+    }
+  ],
+  "notas": "Uso: --personaje luma (repetible: --personaje luma --personaje rok) --prompt 'solo la escena, nombrando a los personajes'. El estilo lo da estilo-referencia.png; no reescribir estilo ni ropa en el prompt. --modo portada = 1024x1024 para portadas de la biblioteca.",
+  "mundos": {
+    "arrecife": ".generador/mundos/luma-arrecife-cristal.webp",
+    "arrecife-puentes": ".generador/mundos/luma-arrecife-cristal-puentes.webp",
+    "arrecife-portada": ".generador/mundos/luma-arrecife-cristal-portada.webp",
+    "faro-portada": ".generador/mundos/luma-faro-mareas-portada.webp",
+    "isla-portada": ".generador/mundos/luma-isla-barcas-portada.webp",
+    "nia-faro-portada": ".generador/mundos/faro-nubes-portada.webp",
+    "nia-jardin-portada": ".generador/mundos/jardin-gigantes-portada.webp",
+    "nia-rio-portada": ".generador/mundos/rio-cantor-portada.webp",
+    "suri-lago-reflejos-portada": ".generador/mundos/suri-lago-reflejos-portada.webp",
+    "suri-arbol-luciernagas-portada": ".generador/mundos/suri-arbol-luciernagas-portada.webp",
+    "suri-sendero-semillas-portada": ".generador/mundos/suri-sendero-semillas-portada.webp",
+    "rok-cueva-ecos-portada": ".generador/mundos/rok-cueva-ecos-portada.webp",
+    "rok-valle-promesas-portada": ".generador/mundos/rok-valle-promesas-portada.webp",
+    "rok-nube-volcan-portada": ".generador/mundos/rok-nube-volcan-portada.webp",
+    "teo-taller-estrellas-portada": ".generador/mundos/teo-taller-estrellas-portada.webp",
+    "teo-ciudad-cobre-portada": ".generador/mundos/teo-ciudad-cobre-portada.webp",
+    "teo-bosque-brujulas-portada": ".generador/mundos/teo-bosque-brujulas-portada.webp",
+    "bit-observatorio-luz-portada": ".generador/mundos/bit-observatorio-luz-portada.webp",
+    "bit-lago-ecos-portada": ".generador/mundos/bit-lago-ecos-portada.webp",
+    "bit-ciudad-semillas-portada": ".generador/mundos/bit-ciudad-semillas-portada.webp"
+  },
+  "estilo_pixel_anterior": "vibrant 2D pixel art storybook illustration, crisp square pixels, dark outlines, rich saturated colors",
+  "estilo_ref_pixel_anterior": ".generador/estilo-referencia.png",
+  "notas_fabula": "27-sep-2026: estilo fábula clásica aprobado por Nick. Fichas nuevas en src/assets/fable/characters/. Las láminas de mundos son pixel: no usarlas con este estilo hasta rehacerlas.",
+  "notas_secundarios": "Personajes secundarios de los cuentos de Rok (sep-2026). Usarlos con --personaje para que no hereden rasgos del protagonista.",
+  "anatomia_general": "every character appears only once; each person and animal has the natural body of its own kind; any extra people are ordinary humans"
+}

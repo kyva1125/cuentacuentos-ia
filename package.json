@@ -1,5 +1,5 @@
 {
-  "name": "cuentos-imaginados",
+  "name": "maticuentos",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "test": "npm run build && node scripts/verify-mvp-library.mjs",
-    "qa:e2e": "python tests/qa-journey.py",
+    "qa:e2e": "node --input-type=module -e \"console.log('Ejecuta tests/qa-journey.mjs con browser_run_code_unsafe(filename) de Playwright MCP, usando la extensión en Chrome estable.')\"",
     "preview": "vite preview",
     "optimize:images": "node scripts/optimize-images.mjs",
     "branch:generate": "node --env-file=server/.env scripts/branch-gen/extract-source.mjs && node --env-file=server/.env scripts/branch-gen/generate.mjs",

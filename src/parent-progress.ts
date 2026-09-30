@@ -4,7 +4,7 @@ export type CloudProgress<T> = { progress: T | null; revision: number }
 export const PARENT_SESSION_KEY = 'aventuras-pixel-parent-v1'
 export const PROGRESS_OWNER_KEY = 'aventuras-pixel-progress-owner-v1'
 export const PROGRESS_SYNC_KEY = 'aventuras-pixel-progress-sync-v1'
-const API_URL = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:3100').replace(/\/$/, '')
+const API_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '')
 
 export function storedParentSession(): ParentSession | null {
   try {

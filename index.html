@@ -1,15 +1,186 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#29ADFF" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <title>Aventuras Píxel · El Río que Canta</title>
-  </head>
-  <body>
-    <!-- THESIS: Reading choices become a visible RPG journey; this rejects the passive story-card gallery. OWN-WORLD: PICO-8 blue, parchment, hard navy outlines, square pixel panels, segmented skill blocks, code-built sprites and mechanical press states. STORY: A child chooses a hero, enters a reusable five-chapter story, replaces choices freely, proves comprehension and sees lasting character-owned growth. FIRST VIEWPORT: One playable explorer leads a three-character roster, with live skill blocks embedded directly in her card. FORM: Child adventure console, brief-pinned pixel-art direction. SEED: brief-pinned-2026-09-15. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md. -->
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Maticuentos: cuentos interactivos en español para elegir, leer y jugar con seis personajes." />
+  <title>Maticuentos — Cuentos interactivos para niños</title>
+  <link rel="icon" type="image/webp" href="/favicon.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <style>
+    :root { --ink:#2e2118; --line:#5a4331; --paper:#fbf4e4; --page:#efe2c4; --sun:#e3a55b; --coral:#a8412c; --leaf:#9db57a; --sky:#9dbdd0; --grape:#5b2a2f; --gold:#d9ab45; --font-display:'Lora',Georgia,serif; --font-body:'Andika','Trebuchet MS',sans-serif; --radius:12px; --shadow-sm:0 1px 2px rgba(46,33,24,.18),0 2px 6px rgba(46,33,24,.12); --shadow-md:0 2px 4px rgba(46,33,24,.16),0 8px 20px rgba(46,33,24,.14); --shadow-lg:0 4px 8px rgba(46,33,24,.16),0 16px 36px rgba(46,33,24,.18); }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:var(--font-body); font-size:18px; line-height:1.35; }
+    button, input, select, textarea { font:inherit; }
+    .pixel {  }
+    .wrap { width:min(1120px, calc(100% - 36px)); margin:0 auto; }
+    .eyebrow, .tiny, h1, h2, h3, .pixel-button, label, .step-number, .tag, .nav-brand { font-family:var(--font-display); }
+    .eyebrow { display:inline-block; margin:0 0 18px; font-size:11px; line-height:1.7; color:var(--grape); }
+    h1, h2, h3, p { margin-top:0; }
+    h1 { max-width:720px; margin-bottom:22px; font-size:clamp(28px, 4.7vw, 56px); line-height:1.32; letter-spacing:-2px; }
+    h2 { margin-bottom:16px; font-size:clamp(22px, 3.2vw, 34px); line-height:1.45; }
+    h3 { margin-bottom:10px; font-size:13px; line-height:1.6; }
+    .section-intro { max-width:650px; margin-bottom:38px; font-size:22px; font-weight:600; }
+    .site-header { position:relative; z-index:2; border-bottom:4px solid var(--gold); background:var(--ink); }
+    .nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .nav-brand { display:flex; align-items:center; gap:10px; font-size:14px; text-decoration:none; color:var(--paper); }
+    .brand-mark { display:grid; grid-template-columns:repeat(3, 8px); grid-template-rows:repeat(3, 8px); gap:2px; width:28px; }
+    .brand-mark i:nth-child(1),.brand-mark i:nth-child(5),.brand-mark i:nth-child(9){background:var(--coral)} .brand-mark i:nth-child(2),.brand-mark i:nth-child(4),.brand-mark i:nth-child(6),.brand-mark i:nth-child(8){background:var(--sun)} .brand-mark i:nth-child(3),.brand-mark i:nth-child(7){background:var(--sky)}
+    .pixel-button { display:inline-block; padding:16px 18px; border:2px solid var(--line); box-shadow:var(--shadow-md); background:var(--gold); color:var(--ink); font-size:12px; line-height:1.5; text-decoration:none; cursor:pointer; transition:transform .12s, box-shadow .12s; }
+    .site-header .pixel-button { border-color:var(--gold); box-shadow:var(--shadow-sm); background:var(--gold); color:var(--ink); }
+    .site-header .pixel-button:hover { background:var(--paper); color:var(--ink); }
+    .pixel-button:hover, .pixel-button:focus-visible { transform:translate(3px,3px); box-shadow:var(--shadow-sm); }
+    .pixel-button:active { transform:translate(6px,6px); box-shadow:none; }
+    .pixel-button.leaf { background:var(--gold); color:var(--ink); }
+    .hero { overflow:hidden; position:relative; padding:74px 0 76px; background:var(--sky); border-bottom:2px solid var(--line); }
+    .hero:before { content:""; position:absolute; width:130px; height:130px; top:35px; left:6%; background:var(--gold); box-shadow:var(--shadow-lg); }
+    .hero:after { content:""; position:absolute; width:22px; height:22px; right:10%; bottom:48px; background:var(--paper); box-shadow:22px 0 0 var(--paper),44px 0 0 var(--paper),22px -22px 0 var(--paper),66px 22px 0 var(--paper); }
+    .hero-grid { position:relative; z-index:1; display:grid; grid-template-columns:minmax(0, .93fr) minmax(420px, 1.07fr); align-items:center; gap:52px; }
+    .hero-copy { padding-top:8px; }
+    .hero-copy p { max-width:580px; margin-bottom:28px; font-size:23px; font-weight:600; }
+    .hero-note { display:block; margin-top:22px; font-size:15px; font-weight:700; }
+    .game-frame { border:2px solid var(--line); box-shadow:var(--shadow-lg); background:var(--ink); padding:10px; transform:rotate(1deg); }
+    .scene { position:relative; min-height:405px; overflow:hidden; border:2px solid var(--paper); background:var(--sky); }
+    .scene-image { display:block; width:100%; height:405px; object-fit:cover;  }
+    .scene .sun { position:absolute; width:64px; height:64px; top:34px; right:60px; background:var(--gold); box-shadow:var(--shadow-lg); }
+    .grass { position:absolute; left:0; right:0; bottom:0; height:150px; background:var(--leaf); box-shadow:0 -10px 0 var(--ink); }
+    .path { position:absolute; z-index:1; width:130px; height:230px; bottom:-82px; left:45%; transform:skew(-14deg); background:var(--sun); border:2px solid var(--line); }
+    .tree { position:absolute; z-index:2; width:42px; height:100px; bottom:104px; background:var(--grape); border:2px solid var(--line); }
+    .tree:before { content:""; position:absolute; width:92px; height:82px; left:-29px; top:-65px; background:var(--leaf); border:2px solid var(--line); box-shadow:22px -15px 0 var(--leaf),-22px 8px 0 var(--leaf); }
+    .tree.left { left:48px; transform:scale(.8); } .tree.right { right:48px; transform:scale(1.1); }
+    .nia { position:absolute; z-index:3; left:44%; bottom:113px; width:72px; height:116px; }
+    .nia .hair { position:absolute; left:7px; top:0; width:59px; height:49px; background:var(--grape); border:2px solid var(--line); box-shadow:-8px 12px 0 var(--grape); }
+    .nia .face { position:absolute; left:16px; top:21px; width:43px; height:40px; background:var(--paper); border:2px solid var(--line); }
+    .nia .eye { position:absolute; top:16px; width:7px; height:7px; background:var(--ink); } .nia .eye.a { left:10px; } .nia .eye.b { right:10px; }
+    .nia .body { position:absolute; left:11px; top:57px; width:52px; height:47px; background:var(--coral); border:2px solid var(--line); }
+    .nia .scarf { position:absolute; z-index:1; left:7px; top:54px; width:65px; height:12px; background:var(--gold); border:2px solid var(--line); }
+    .nia .leg { position:absolute; bottom:0; width:17px; height:27px; background:var(--ink); } .nia .leg.a {left:18px}.nia .leg.b{right:17px}
+    .story-window { position:absolute; z-index:4; bottom:10px; left:10px; right:10px; padding:13px 15px; border:2px solid var(--line); background:var(--paper); box-shadow:var(--shadow-md); }
+    .story-window b { display:block; margin-bottom:6px; font-family:var(--font-display); font-size:10px; line-height:1.5; color:var(--coral); }
+    .story-window span { display:block; font-size:15px; font-weight:800; line-height:1.2; }
+    .section { padding:82px 0; border-bottom:2px solid var(--line); }
+    .how { background:var(--paper); }
+    .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .step { min-height:260px; padding:22px; border:2px solid var(--line); background:var(--gold); box-shadow:var(--shadow-md); }
+    .step:nth-child(2){background:var(--sky)}.step:nth-child(3){background:var(--coral); color:var(--paper)}.step:nth-child(4){background:var(--leaf)}
+    .step-number { display:block; width:42px; height:42px; margin-bottom:28px; padding-top:12px; border:2px solid var(--line); background:var(--paper); color:var(--ink); text-align:center; font-size:11px; }
+    .step p { margin:0; font-weight:700; }
+    .characters { background:var(--grape); color:var(--paper); }
+    .characters .eyebrow { color:var(--gold); } .characters .section-intro { color:var(--paper); }
+    .character-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:14px; }
+    .character { min-height:225px; padding:14px; border:2px solid var(--line); background:var(--paper); color:var(--ink); box-shadow:var(--shadow-md); }
+    .avatar { display:block; width:86px; height:86px; margin:3px auto 18px; border:2px solid var(--line); background:var(--sky); box-shadow:var(--shadow-md); object-fit:cover;  }
+    .character h3 { margin-bottom:7px; font-size:10px; } .tag { display:block; margin-bottom:8px; font-size:8px; line-height:1.6; color:var(--coral); }.character p{margin:0;font-size:14px;line-height:1.17;font-weight:700}
+    .difference { background:var(--paper); }
+    .proof-board { border:2px solid var(--line); box-shadow:var(--shadow-lg); background:var(--ink); }
+    .proof { display:grid; grid-template-columns:98px 1fr; gap:20px; align-items:center; padding:25px; border-bottom:2px solid var(--line); background:var(--paper); }
+    .proof:last-child { border-bottom:0; }.proof:nth-child(2){background:var(--gold)}.proof:nth-child(3){background:var(--leaf)}
+    .proof-icon { width:70px; height:70px; border:2px solid var(--line); background:var(--sky); box-shadow:var(--shadow-md); }
+    .proof:nth-child(2) .proof-icon{background:var(--coral)}.proof:nth-child(3) .proof-icon{background:var(--grape)}
+    .proof-icon:before { content:""; display:block; width:25px; height:25px; margin:18px; background:var(--paper); box-shadow:20px -10px 0 var(--paper); }
+    .proof h3 { margin:0 0 8px; }.proof p{margin:0;font-size:18px;font-weight:700;}
+    .signup { padding:82px 0; background:var(--ink); color:var(--paper); }
+    .signup-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:60px; align-items:start; }.signup .eyebrow{color:var(--gold)}.signup p{font-size:22px;font-weight:600}.signup-note{font-size:16px !important;color:var(--gold)}
+    form { padding:28px; border:2px solid var(--paper); background:var(--sky); box-shadow:var(--shadow-lg); color:var(--ink); }
+    .fields { display:grid; grid-template-columns:1fr 150px; gap:17px; }.field-wide{grid-column:1/-1}label{display:block;margin-bottom:9px;font-size:9px;line-height:1.6}input,select,textarea{width:100%;padding:13px;border:2px solid var(--line);border-radius:0;background:var(--paper);color:var(--ink);font-weight:700;outline:none}textarea{min-height:100px;resize:vertical}input:focus,select:focus,textarea:focus{box-shadow:var(--shadow-sm)}.form-foot{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:22px}.form-foot .pixel-button{border-radius:0}.form-message{margin:0;font-size:15px;font-weight:800}.privacy{margin:16px 0 0;font-size:14px;font-weight:700}
+    footer { padding:28px 0; background:var(--paper); border-top:2px solid var(--line); }footer .wrap{display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:15px;font-weight:800}.footer-soon{font-family:"Press Start 2P",monospace;font-size:9px;color:var(--grape)}
+    @media(max-width:900px){.hero-grid,.signup-grid{grid-template-columns:1fr;gap:38px}.hero-copy{max-width:700px}.game-frame{max-width:600px;justify-self:center;width:100%}.steps{grid-template-columns:repeat(2,1fr)}.character-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:570px){body{font-size:17px}.wrap{width:min(100% - 28px,1120px)}.nav{min-height:67px}.nav-brand{font-size:10px}.nav .pixel-button{padding:11px;font-size:8px;box-shadow:var(--shadow-sm)}.hero{padding:53px 0 56px}.hero:before{width:70px;height:70px;top:22px;left:auto;right:8%;opacity:.8}h1{font-size:28px;letter-spacing:-1px}.hero-copy p{font-size:20px}.scene{min-height:348px}.story-window span{font-size:13px}.steps{grid-template-columns:1fr}.step{min-height:0}.character-grid{grid-template-columns:repeat(2,1fr);gap:12px}.character{min-height:210px}.section,.signup{padding:58px 0}.section-intro{font-size:20px}.proof{grid-template-columns:72px 1fr;gap:15px;padding:18px}.proof-icon{width:54px;height:54px}.proof-icon:before{width:17px;height:17px;margin:13px;box-shadow:15px -8px 0 var(--paper)}.proof p{font-size:16px}.fields{grid-template-columns:1fr}.field-wide{grid-column:auto}form{padding:20px}.signup p{font-size:20px}footer .wrap{align-items:flex-start;flex-direction:column}}
+
+    /* Fábula clásica (sep-2026) */
+    body { background-color:var(--page); background-image:radial-gradient(ellipse at 50% 0,rgba(255,250,235,.7),transparent 60%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .15 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+    h1, h2, h3 { font-family:var(--font-display); font-weight:600; letter-spacing:-.01em; line-height:1.15; }
+    h1 { font-weight:700; }
+    h3 { font-size:20px; }
+    .eyebrow, .tag, .step-number, label { letter-spacing:.08em; text-transform:uppercase; font-weight:600; }
+    .eyebrow { font-size:14px; } .tag { font-size:12px; } label { font-size:13px; }
+    .site-header { background:linear-gradient(#3a2a1e,#2a1d14); border-bottom:3px double var(--gold); }
+    .nav-brand { font-size:22px; font-weight:700; color:#f3e3bd; letter-spacing:.02em; }
+    .pixel-button { border-radius:999px; border:1.5px solid #8a6420; background:linear-gradient(#e2b857,#cf9d34); font-size:17px; font-weight:600; padding:14px 26px; box-shadow:var(--shadow-md); }
+    .pixel-button:hover, .pixel-button:focus-visible { transform:translateY(-1px); box-shadow:var(--shadow-lg); }
+    .pixel-button:active { transform:translateY(1px); box-shadow:var(--shadow-sm); }
+    .site-header .pixel-button { border-color:#8a6420; box-shadow:none; }
+    .hero { background:transparent; border-bottom:0; }
+    .hero:before, .hero:after { display:none; }
+    .game-frame { border-radius:var(--radius); transform:rotate(-1deg); background:#3a2a1e; box-shadow:var(--shadow-lg); }
+    .scene { border-radius:8px; }
+    .story-window { border-radius:10px; background:rgba(251,244,228,.95); }
+    .story-window b { color:var(--coral); letter-spacing:.06em; font-size:12px; }
+    .section { border-bottom:0; }
+    .how { background:transparent; }
+    .step, .character, .proof-board, form, .avatar, .step-number, input, select, textarea { border-radius:var(--radius); }
+    .step { background:var(--paper); color:var(--ink); }
+    .step:nth-child(n) { background:var(--paper); color:var(--ink); }
+    .step-number { border-radius:50%; background:var(--gold); padding-top:9px; font-size:14px; }
+    .characters { background:radial-gradient(ellipse at 30% 10%,#6d3439,#4a2125); }
+    .characters h2, .characters .eyebrow { color:#f0cf7a; }
+    .avatar { background:var(--paper); }
+    .character h3 { font-size:22px; }
+    .signup { background:linear-gradient(#3a2a1e,#2a1d14); }
+    .signup h2 { color:#f0cf7a; }
+    #characters-title:after, #how-title:after { content:'❦'; display:block; margin-top:.3em; font-size:.6em; color:var(--gold); }
+    footer { background:transparent; border-top:1px solid rgba(90,67,49,.35); }
+  </style>
+</head>
+<body>
+  <!-- TESIS: el acceso anticipado se siente como entrar a una pequeña guilda de aventuras. MUNDO: un libro pixelado brillante con Nia dentro de una escena GPT. RECORRIDO: promesa, ciclo de lectura, seis héroes e invitación clara. FORMULARIO: breve y solo de interés. -->
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Navegación principal">
+      <a class="nav-brand" href="#top"><img src="/maticuentos-logo.webp" alt="" width="32" height="32" />MATICUENTOS</a>
+      <a class="pixel-button" href="/stories/">ELEGIR PERSONAJE</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">MATICUENTOS</p>
+          <h1 id="hero-title">Cuentos donde tú decides qué pasa después.</h1>
+          <p>Elige a Nia, Teo, Luma, Rok, Bit o Suri. Lee, toma decisiones y descubre cómo cambia cada aventura.</p>
+          <a class="pixel-button leaf" href="/stories/">EMPEZAR A LEER →</a>
+          <span class="hero-note">Puedes empezar sin crear una cuenta.</span>
+        </div>
+        <div class="game-frame" aria-label="Ilustración pixel art de Nia explorando el río que canta">
+          <div class="scene pixel">
+            <img class="scene-image" src="/landing-assets/rio-cantor-cover-v3.webp" alt="Nia y un búho descubren el Río Cantor" />
+            <div class="story-window"><b>CAPÍTULO 2 · EL RÍO QUE CANTA</b><span>Nia descubre un sendero que brilla. ¿Qué hará ahora?</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how" aria-labelledby="how-title">
+      <div class="wrap"><h2 id="how-title">Así comienza tu aventura</h2><p class="section-intro">Elige, lee y decide a tu ritmo.</p>
+        <div class="steps">
+          <article class="step"><span class="step-number">01</span><h3>ELIGE UN HÉROE</h3><p>Empieza con el personaje que tu peque quiere acompañar.</p></article>
+          <article class="step"><span class="step-number">02</span><h3>LEE LA AVENTURA</h3><p>Capítulos cortos mantienen la historia en movimiento mientras tu peque lee.</p></article>
+          <article class="step"><span class="step-number">03</span><h3>TOMA UNA DECISIÓN</h3><p>Cada elección desarrolla una habilidad: valentía, ingenio o amistad.</p></article>
+          <article class="step"><span class="step-number">04</span><h3>DESCUBRE MÁS</h3><p>Responde preguntas, gana monedas y descubre nuevos héroes y cuentos.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section characters" aria-labelledby="characters-title">
+      <div class="wrap"><p class="eyebrow">CONOCE AL EQUIPO</p><h2 id="characters-title">Seis héroes. Seis aventuras esperando ser contadas.</h2><p class="section-intro">Cada personaje tiene su propio mundo, su propio cuento y su forma de enfrentar un desafío.</p>
+        <div class="character-grid">
+          <article class="character"><img class="avatar" src="/landing-assets/nia-fabula.webp" alt="Nia, la exploradora" /><h3>NIA</h3><span class="tag">LA EXPLORADORA</span><p>Curiosa, valiente y lista para seguir cualquier pista misteriosa.</p></article>
+          <article class="character"><img class="avatar" src="/landing-assets/teo-fabula.webp" alt="Teo, el inventor" /><h3>TEO</h3><span class="tag">EL INVENTOR</span><p>Construye, prueba y le da una oportunidad más a cada idea loca.</p></article>
+          <article class="character"><img class="avatar" src="/landing-assets/luma-fabula.webp" alt="Luma, la guardiana" /><h3>LUMA</h3><span class="tag">LA GUARDIANA</span><p>Serena y atenta: siempre nota quién necesita una amistad.</p></article>
+          <article class="character"><img class="avatar" src="/landing-assets/rok-fabula.webp" alt="Rok, el joven dragón" /><h3>ROK</h3><span class="tag">JOVEN DRAGÓN</span><p>De gran corazón, algo fogoso y aún aprendiendo a rugir.</p></article>
+          <article class="character"><img class="avatar" src="/landing-assets/bit-fabula.webp" alt="Bit, el robot curioso" /><h3>BIT</h3><span class="tag">ROBOT CURIOSO</span><p>Una alegre máquina de preguntas con talento para sorprender.</p></article>
+          <article class="character"><img class="avatar" src="/landing-assets/suri-fabula.webp" alt="Suri, el espíritu del bosque" /><h3>SURI</h3><span class="tag">ESPÍRITU DEL BOSQUE</span><p>Silenciosa e ingeniosa, con ojo mágico para los caminos ocultos.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="signup" aria-labelledby="play-title">
+      <div class="wrap"><h2 id="play-title">¿Qué aventura eliges hoy?</h2><p>Los seis personajes tienen cuentos para descubrir. Tu avance se guarda mientras lees.</p><a class="pixel-button" href="/stories/">ELEGIR PERSONAJE →</a></div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>© Maticuentos · Una pequeña aventura para grandes lectores.</span><a href="/stories/">Ir a los cuentos</a></div></footer>
+</body>
 </html>
